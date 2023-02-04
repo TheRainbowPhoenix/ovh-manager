@@ -1,17 +1,17 @@
-import { parse } from 'date-fns';
-import { formatDistanceStrict } from 'date-fns';
-// TODO: upgrade prettier
-// eslint-disable-next-line prettier/prettier
-import type { Locale } from 'date-fns';
+// import { parse } from 'date-fns';
+// import { formatDistanceStrict } from 'date-fns';
+// // TODO: upgrade prettier
+// // eslint-disable-next-line prettier/prettier
+// import type { Locale } from 'date-fns';
 
-export const fromNow = async (date: string, locale: string): Promise<string> => {
-	const importLocale = () => import(`date-fns/locale`);
-	const locales = (await importLocale()) as Record<string, Locale>;
-	return formatDistanceStrict(parse(date, 'yyyy-MM-dd', new Date()), new Date(), {
-		locale: locales[locale.split('_')[0].toLowerCase()],
-		addSuffix: true,
-		roundingMethod: 'round'
-	});
-};
+// export const fromNow = async (date: string, locale: string): Promise<string> => {
+// 	const importLocale = () => import(`date-fns/locale`);
+// 	const locales = (await importLocale()) as Record<string, Locale>;
+// 	return formatDistanceStrict(parse(date, 'yyyy-MM-dd', new Date()), new Date(), {
+// 		locale: locales[locale.split('_')[0].toLowerCase()],
+// 		addSuffix: true,
+// 		roundingMethod: 'round'
+// 	});
+// };
 
-export default { fromNow };
+// export default { fromNow };

@@ -2,7 +2,7 @@
 	import { headerCtx } from '$lib/context/header';
 	import { notifications, notificationsLoading } from '$lib/core/notifications';
 	import type { Notification } from '$lib/core/notifications';
-	import { fromNow } from '$lib/helpers/dateHelper';
+	// import { fromNow } from '$lib/helpers/dateHelper';
 	import { userLocale } from '$lib/i18n';
 	import { get } from 'svelte/store';
 	import Notifications from './Notifications.svelte';
@@ -15,20 +15,20 @@
 		fromNow: string;
 	}
 
-	const getGroupedNotifications = async () => {
+	const getGroupedNotifications = (n: Notification[]) => {
 		const locale = get(userLocale); // useApplication().environment.getUserLocale();
 
-		let n = get(notifications);
+		// let n = get(notifications);
 		if (!n || n.length == 0) return {};
 
-		const allDates = [...new Set(get(notifications).map(({ date }) => date))];
+		// const allDates = [...new Set(get(notifications).map(({ date }) => date))];
 
-		const groups: NotificationGroup[] = await Promise.all(
-			allDates.map(async (date) => {
-				const dateFromNow = await fromNow(date, locale);
-				return { date, fromNow: dateFromNow };
-			})
-		);
+		// const groups: NotificationGroup[] = await Promise.all(
+		// 	allDates.map(async (date) => {
+		// 		const dateFromNow = await fromNow(date, locale);
+		// 		return { date, fromNow: dateFromNow };
+		// 	})
+		// );
 
 		// const dateGroups = groups.reduce(
 		// 	(all: Record<string, NotificationGroup>, { date, fromNow: dateFromNow }) => {
@@ -61,7 +61,9 @@
 		[date: string]: Notification[];
 	} = {};
 
-	$: getGroupedNotifications().then((g) => (groupedNotifications = g));
+	notifications.subscribe((n) => {
+		groupedNotifications = getGroupedNotifications(n);
+	});
 </script>
 
 <div
