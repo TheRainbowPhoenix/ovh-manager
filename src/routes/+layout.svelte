@@ -14,11 +14,10 @@
 			</main>
 			<iframe title="app" role="document" src="about:blank" />
 		</div>
+		<div class="managerShell_footer">
+			<p>Build with <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		</div>
 	</div>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
 </div>
 
 <style lang="scss">

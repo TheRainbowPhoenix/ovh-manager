@@ -16,7 +16,7 @@
 	let currentUniverse: string = 'currentUniverse';
 	let isDropdownOpen = false;
 
-	let searchURL = '/test'; // TODO: to store
+	let searchURL = '#'; // TODO: to store
 
 	onMount(async () => {
 		fetchUniverses().then((u) => {
