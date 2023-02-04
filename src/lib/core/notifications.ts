@@ -170,6 +170,12 @@ export const getNotificationById = (notificationId: string): Notification | unde
 };
 
 export const updateNotications = (status: unknown): Promise<unknown> => {
+	let updated = [...get(notifications)].map((n) => {
+		n.setStatus(NOTIFICATION_STATUS_ENUM.ACKNOWLEDGED);
+		return n;
+	});
+	notifications.set(updated);
+
 	return reketInstance.post('/notification', status, { requestType: 'aapi' });
 };
 
@@ -179,6 +185,7 @@ export const readAllNotifications = async () => {
 			.filter(({ updating, isActive }) => !updating && isActive())
 			.map(({ id }) => id)
 	});
+	// await refreshNotifications();
 	// queryClient.invalidateQueries(['notifications']);
 };
 

@@ -7,11 +7,13 @@
 	} from '$lib/core/notifications';
 	import { t } from '$lib/i18n';
 	import { onMount } from 'svelte';
-	// let notificationsCount = 0;
 
-	// notifications.subscribe((n) => {
-	// 	notificationsCount = (n || []).filter(({ isActive }) => isActive()).length;
-	// });
+	let notificationsCount = 0;
+
+	notifications.subscribe((n) => {
+		notificationsCount = (n || []).filter(({ isActive }) => isActive()).length;
+		console.log('notificationsCount : ', notificationsCount);
+	});
 
 	onMount(() => {
 		setTimeout(() => {
@@ -19,7 +21,7 @@
 		}, 5 * 1000); // 5 seconds refresh
 	});
 
-	$: notificationsCount = ($notifications || []).filter(({ isActive }) => isActive()).length;
+	// $: notificationsCount = ($notifications || []).filter(({ isActive }) => isActive()).length;
 
 	function onClick(): void {
 		// trackingPlugin.trackClick({
