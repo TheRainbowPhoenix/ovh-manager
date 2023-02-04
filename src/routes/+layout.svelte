@@ -5,12 +5,16 @@
 
 <div class="app">
 	<div class="managerShell">
-		<Header />
+		<div class="managerShell_header">
+			<Header />
+		</div>
+		<div class="managerShell_content">
+			<main>
+				<slot />
+			</main>
+			<iframe title="app" role="document" src="about:blank" />
+		</div>
 	</div>
-
-	<main>
-		<slot />
-	</main>
 
 	<footer>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
