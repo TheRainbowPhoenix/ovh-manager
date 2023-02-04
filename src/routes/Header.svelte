@@ -3,12 +3,15 @@
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
 	import NavBar from '$lib/components/container/navbar/NavBar.svelte';
+	import NotificationsSidebar from '$lib/components/container/common/notifications-sidebar/NotificationsSidebar.svelte';
 
 	let environment = {}; // TODO
 </script>
 
 <div class="_popoverClickAway_1djxe_1 _hidden_1djxe_12 sf-hidden" />
 <NavBar {environment} />
+<!-- AccountSideBar -->
+<NotificationsSidebar />
 
 <!--
 <div class="oui-navbar _navbar_2e1hw_1">

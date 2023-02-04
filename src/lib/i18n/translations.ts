@@ -25,7 +25,16 @@ const _t: TranslationsTable = {
 		navbar_notifications: 'Notifications',
 		navbar_language_change: 'Select interface language',
 		navbar_account: 'My account',
-		navbar_search: 'Search'
+		navbar_search: 'Search',
+
+		language_change: 'Change the interface language',
+
+		notifications_mark_as_read: 'Mark as read',
+		notifications_mark_as_unread: 'Mark as unread',
+		notification_read: 'Read',
+		notification_unread: 'Unread',
+		no_notifications_title: 'You are up to date!',
+		no_notifications_description: 'You do not have any notifications.'
 	},
 	fr: {
 		'homepage.title': 'Votre titre',
@@ -47,7 +56,16 @@ const _t: TranslationsTable = {
 		navbar_notifications: 'Notifications',
 		navbar_language_change: "Changer la langue de l'interface",
 		navbar_account: 'Mon compte',
-		navbar_search: 'Rechercher'
+		navbar_search: 'Rechercher',
+
+		language_change: "Changer la langue de l'inferface",
+
+		notifications_mark_as_read: 'Marquer comme lu',
+		notifications_mark_as_unread: 'Marquer comme non lu',
+		notification_read: 'Lu',
+		notification_unread: 'Non lu',
+		no_notifications_title: 'Vous êtes à jour !',
+		no_notifications_description: "Vous n'avez aucune notification."
 	}
 };
 

@@ -3,9 +3,15 @@ lockfileVersion: 5.4
 specifiers:
   '@fontsource/fira-mono': ^4.5.10
   '@neoconfetti/svelte': ^1.0.0
+  '@ovh-ux/manager-config': ^0.4.0
+  '@ovh-ux/ovh-reket': ^1.0.2
+  '@ovh-ux/ui-kit': ^6.3.0
   '@sveltejs/adapter-auto': ^1.0.0
   '@sveltejs/kit': ^1.0.0
   '@types/cookie': ^0.5.1
+  '@types/dompurify': ^2.4.0
+  date-fns: ^2.29.3
+  dompurify: ^2.4.3
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
   sass: ^1.58.0
@@ -14,6 +20,14 @@ specifiers:
   tslib: ^2.4.1
   typescript: ^4.9.3
   vite: ^4.0.0
+
+dependencies:
+  '@ovh-ux/manager-config': 0.4.0
+  '@ovh-ux/ovh-reket': 1.0.2
+  '@ovh-ux/ui-kit': 6.3.0
+  '@types/dompurify': 2.4.0
+  date-fns: 2.29.3
+  dompurify: 2.4.3
 
 devDependencies:
   '@fontsource/fira-mono': 4.5.10
@@ -275,6 +289,48 @@ packages:
       fastq: 1.15.0
     dev: true
 
+  /@ovh-ux/manager-config/0.4.0:
+    resolution: {integrity: sha512-ZiLfkRNwCqnyQvYpN9Frx/WKXE9JEQhtkmoxIdhzDtkBjvuIHbC9uGH7rzh771xfuZcUPv8hmidwf0cjdpXCjQ==}
+    deprecated: This package used to be published to be re-use across multiple git repositories. Please refer to our monorepo ovh/manager.
+    dev: false
+
+  /@ovh-ux/ovh-reket/1.0.2:
+    resolution: {integrity: sha512-Bi/XkjJoIJNvx1h25ug10RuOZvev7PKUyPXXXq1VO8x6A4+r5az042IxCeFJjRwYXhoBfA4lKtt3XFKrJQWO1A==}
+    dependencies:
+      '@ovhcloud/reket-axios-client': 0.2.1
+      '@ovhcloud/reket-core': 0.2.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@ovh-ux/ui-kit/6.3.0:
+    resolution: {integrity: sha512-Vy74YQYFdT+d5O7FPETDZ5Yp5dmk+ifZbhlEToaCg1lflBOhnzqT3+cQf1BkbYDt4+X6M4jc4qKYit79tHC7FA==}
+    peerDependencies:
+      '@uirouter/angularjs': ^1.0.22
+      angular: '>=1.6.x'
+      angular-aria: '>=1.6.x'
+      angular-sanitize: '>=1.6.x'
+      bloodhound-js: ^1.2.3
+      clipboard: ^2.0.4
+      flatpickr: ^4.6.9
+      less: ^3.9.0
+      popper.js: ^1.16.1
+      ui-select: ^0.19.8
+    dev: false
+
+  /@ovhcloud/reket-axios-client/0.2.1:
+    resolution: {integrity: sha512-u6X7Opfcqk4cagz++cescEzKnOzyQStqj6DtoJWx4lFQKcM/bFu/g4n/DSVGFP+xDOmyMJFN2JJAmtRVJQjlfQ==}
+    dependencies:
+      '@ovhcloud/reket-core': 0.2.1
+      axios: 0.21.4
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@ovhcloud/reket-core/0.2.1:
+    resolution: {integrity: sha512-RdRV7ZJU+CKULTeoXnZD+YNZDOui5RUD+SPT1EpGEpMI3Nbix5RiT9wZx/zPYFKCSw1eYJ+Ycr+8G4wEaWaTEQ==}
+    dev: false
+
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
@@ -339,6 +395,12 @@ packages:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
     dev: true
 
+  /@types/dompurify/2.4.0:
+    resolution: {integrity: sha512-IDBwO5IZhrKvHFUl+clZxgf3hn2b/lU6H1KaBShPkQyGJUQ0xwebezIPSuiyGwfz1UzJWQl4M7BDxtHtCCPlTg==}
+    dependencies:
+      '@types/trusted-types': 2.0.2
+    dev: false
+
   /@types/node/18.11.18:
     resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
     dev: true
@@ -353,6 +415,10 @@ packages:
       '@types/node': 18.11.18
     dev: true
 
+  /@types/trusted-types/2.0.2:
+    resolution: {integrity: sha512-F5DIZ36YVLE+PN+Zwws4kJogq47hNgX3Nx6WyDJ3kcplxyke3XIzB8uK5n/Lpm1HBsbGzd6nmGehL8cPekP+Tg==}
+    dev: false
+
   /anymatch/3.1.3:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
     engines: {node: '>= 8'}
@@ -360,6 +426,14 @@ packages:
       normalize-path: 3.0.0
       picomatch: 2.3.1
     dev: true
+
+  /axios/0.21.4:
+    resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
+    dependencies:
+      follow-redirects: 1.15.2
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -424,6 +498,11 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
+  /date-fns/2.29.3:
+    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
+    engines: {node: '>=0.11'}
+    dev: false
+
   /debug/4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
     engines: {node: '>=6.0'}
@@ -449,6 +528,10 @@ packages:
   /devalue/4.2.3:
     resolution: {integrity: sha512-JG6Q248aN0pgFL57e3zqTVeFraBe+5W2ugvv1mLXsJP6YYIYJhRZhAl7QP8haJrqob6X10F9NEkuCvNILZTPeQ==}
     dev: true
+
+  /dompurify/2.4.3:
+    resolution: {integrity: sha512-q6QaLcakcRjebxjg8/+NP+h0rPfatOgOzc46Fst9VAA3jF2ApfKBNKMzdP4DYTqtUMXSCd5pRS/8Po/OmoCHZQ==}
+    dev: false
 
   /es6-promise/3.3.1:
     resolution: {integrity: sha512-SOp9Phqvqn7jtEUxPWdWfWoLmyt2VaJ6MpvP9Comy1MceMXqE6bxvaTu4iaxpYYPzhny28Lc+M87/c2cPK6lDg==}
@@ -511,6 +594,16 @@ packages:
     dependencies:
       to-regex-range: 5.0.1
     dev: true
+
+  /follow-redirects/1.15.2:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dev: false
 
   /fs.realpath/1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}

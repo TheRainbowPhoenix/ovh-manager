@@ -1,8 +1,8 @@
-import { derived, writable } from 'svelte/store';
+import { derived, writable, get } from 'svelte/store';
 import translations from './translations';
 
-export const locale = writable('en');
-export const locales = Object.keys(translations);
+export const userLocale = writable('en');
+export const availableLocales = Object.keys(translations);
 
 function translate(
 	locale: string,
@@ -35,8 +35,40 @@ function translate(
 }
 
 export const t = derived(
-	locale,
+	userLocale,
 	($locale) =>
 		(key: string, vars = {}) =>
 			translate($locale, key, vars)
 );
+
+export const setUserLocale = (l: string) => {
+	if (!availableLocales.includes(l)) {
+		console.error('Unknown locale : ' + l);
+		l = 'en';
+	}
+	userLocale.set(l);
+};
+
+export interface Language {
+	name: string;
+	key: string;
+}
+
+const languageMap: { [key: string]: Language } = {
+	en: {
+		name: 'English',
+		key: 'en'
+	},
+	fr: {
+		name: 'French',
+		key: 'fr'
+	}
+};
+
+export let getAvailableLanguages: () => Language[] = () => {
+	return availableLocales.map((l) => languageMap[l] || { name: l, key: l });
+};
+
+export let getCurrentLanguage = () => {
+	return languageMap[get(userLocale)] || languageMap['en'];
+};

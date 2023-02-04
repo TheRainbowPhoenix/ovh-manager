@@ -4,17 +4,23 @@
 	import Hamburger from './HamburgerMenu.svelte';
 	import Search from './Search.svelte';
 	import { fetchUniverses, getBrandURL, Universe } from './service';
-	import UniversesComp from './Universes.svelte';
+	import Universes from './Universes.svelte';
+
+	import { headerCtx } from '$lib/context/header';
+	import NavReshuffleSwitchBack from '$lib/components/container/common/NavReshuffleSwitchBack.svelte';
+	import LanguageMenu from '$lib/components/container/common/language/LanguageMenu.svelte';
 
 	import '$lib/assets/scss/modal.scss';
+
 	import { onMount } from 'svelte';
-	import Universes from './Universes.svelte';
+	import { setUserLocale, userLocale } from '$lib/i18n';
+	import NotificationsButton from '../common/notifications-sidebar/NotificationsButton.svelte';
 
 	export let environment: Object = {}; // TODO
 
 	let universes: Universe[] = [];
 	let currentUniverse: string = 'currentUniverse';
-	let isDropdownOpen = false;
+	let isDropdownOpen: boolean = false;
 
 	let searchURL = '#'; // TODO: to store
 
@@ -53,6 +59,30 @@
 				<Search targetURL={searchURL} />
 			</div>
 		{/if}
+		<div class="oui-navbar-list__item">
+			<!-- TODO: random modal to ask to switch to beta -->
+			<!-- 
+			<NavReshuffleSwitchBack
+				onChange={(show) => {
+					isDropdownOpen = show;
+					$headerCtx.isNotificationsSidebarVisible = false;
+				}}
+			/>
+            -->
+		</div>
+		<div class="oui-navbar-list__item">
+			<LanguageMenu
+				{setUserLocale}
+				{userLocale}
+				onChange={(show) => {
+					isDropdownOpen = show;
+					$headerCtx.isNotificationsSidebarVisible = false;
+				}}
+			/>
+		</div>
+		<div class="oui-navbar-list__item">
+			<NotificationsButton />
+		</div>
 	</div>
 </div>
 
