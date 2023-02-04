@@ -1,5 +1,5 @@
-import parse from 'date-fns/parse';
-import formatDistanceStrict from 'date-fns/formatDistanceStrict';
+import { parse } from 'date-fns';
+import { formatDistanceStrict } from 'date-fns';
 // TODO: upgrade prettier
 // eslint-disable-next-line prettier/prettier
 import type { Locale } from 'date-fns';
