@@ -15,3 +15,5 @@
 // };
 
 // export default { fromNow };
+
+export const doDateStuffMaybe = () => {};

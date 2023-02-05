@@ -4,12 +4,21 @@
 	import github from '$lib/images/github.svg';
 	import NavBar from '$lib/components/container/navbar/NavBar.svelte';
 	import NotificationsSidebar from '$lib/components/container/common/notifications-sidebar/NotificationsSidebar.svelte';
+	import { getContext, onMount } from 'svelte';
+	import { environment } from '$lib/core/environment';
+	import { get } from 'svelte/store';
 
-	let environment = {}; // TODO
+	let env = get(environment);
+
+	environment.subscribe((e) => {
+		env = e;
+	});
+
+	// let shell = getContext('shell');
 </script>
 
 <div class="_popoverClickAway_1djxe_1 _hidden_1djxe_12 sf-hidden" />
-<NavBar {environment} />
+<NavBar environment={env} />
 <!-- AccountSideBar -->
 <NotificationsSidebar />
 

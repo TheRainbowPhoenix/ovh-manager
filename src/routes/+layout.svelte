@@ -1,6 +1,41 @@
-<script>
+<script lang="ts">
+	import type Shell from '$lib/components/shell/shell';
+	import { initShell } from '$lib/components/shell/shell';
+
+	import { environment as environmentStore, type Environment } from '$lib/core/environment';
+	import { onMount, setContext } from 'svelte';
+
 	import Header from './Header.svelte';
 	import './styles.css';
+
+	let shell: Shell;
+
+	// export let environment: Environment;
+
+	// initShell().then((s) => {
+	// 	shell = s;
+	// 	const environment: Environment = shell.getPlugin('environment').getEnvironment();
+
+	// 	const locale = environment.getUserLocale();
+	// 	// const config = () => import(`./config-${environment.getRegion()}.js`);
+
+	// 	console.log(shell.getPlugin('environment').getEnvironment());
+	// });
+	onMount(async () => {
+		shell = await initShell();
+		// 	shell = s;
+		const environment: Environment = shell.getPlugin('environment').getEnvironment();
+
+		environmentStore.set(environment);
+
+		const locale = environment.getUserLocale();
+		// 	// const config = () => import(`./config-${environment.getRegion()}.js`);
+
+		console.log(shell.getPlugin('environment').getEnvironment());
+		// });
+		// setContext('shell', shell);
+		// let shell = await initShell();
+	});
 </script>
 
 <div class="app">

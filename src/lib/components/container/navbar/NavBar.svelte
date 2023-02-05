@@ -9,6 +9,7 @@
 	import { headerCtx } from '$lib/context/header';
 	import NavReshuffleSwitchBack from '$lib/components/container/common/NavReshuffleSwitchBack.svelte';
 	import LanguageMenu from '$lib/components/container/common/language/LanguageMenu.svelte';
+	import { environment as environmentStore, type Environment } from '$lib/core/environment';
 
 	import '$lib/assets/scss/modal.scss';
 
@@ -16,7 +17,11 @@
 	import { setUserLocale, userLocale } from '$lib/i18n';
 	import NotificationsButton from '../common/notifications-sidebar/NotificationsButton.svelte';
 
-	export let environment: Object = {}; // TODO
+	export let environment: Environment; // TODO
+
+	environmentStore.subscribe((e) => {
+		environment = e;
+	});
 
 	let universes: Universe[] = [];
 	let currentUniverse: string = 'currentUniverse';
@@ -83,6 +88,7 @@
 		<div class="oui-navbar-list__item">
 			<NotificationsButton />
 		</div>
+		<Account user={environment.getUser()} />
 	</div>
 </div>
 
