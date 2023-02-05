@@ -40,7 +40,26 @@ const _t: TranslationsTable = {
 		user_account_menu_logout: 'Log out',
 
 		user_account_menu_title: 'Account',
-		user_account_menu_status_VALID: 'Valid'
+		user_account_menu_status_VALID: 'Valid',
+
+		manager_hub_order_dashboard: 'Start the OVHcloud adventure and order your first product',
+		manager_hub_order_dashboard_discover: 'Explore our products',
+
+		manager_hub_dashboard_welcome: 'Welcome',
+
+		hub_support_title: 'Recent support tickets',
+		hub_support_see_more: 'See all',
+		hub_support_read: 'Read',
+		hub_support_state_open: 'Open',
+		hub_support_state_closed: 'Closed',
+		hub_support_state_unknown: 'Unknown',
+		hub_support_account_management: 'Account management',
+		hub_support_need_help: 'Need help?',
+		hub_support_need_help_more: 'Need support using our products and services? Browse our guides.',
+		hub_support_help: 'Understanding and using OVHcloud solutions',
+		hub_support_error: 'Unable to retrieve support tickets',
+
+		manager_hub_catalog_items_order: 'Order'
 	},
 	fr: {
 		'homepage.title': 'Votre titre',
@@ -77,7 +96,27 @@ const _t: TranslationsTable = {
 		user_account_menu_logout: 'Déconnecter',
 
 		user_account_menu_title: 'Compte',
-		user_account_menu_status_VALID: 'Valide'
+		user_account_menu_status_VALID: 'Valide',
+
+		manager_hub_order_dashboard: "Démarrez l'aventure OVHcloud et commandez votre premier produit",
+		manager_hub_order_dashboard_discover: 'Découvrez nos produits',
+
+		manager_hub_dashboard_welcome: 'Bienvenue',
+
+		hub_support_title: "Dernières demandes d'assistance",
+		hub_support_see_more: 'Voir tout',
+		hub_support_read: 'Lire',
+		hub_support_state_open: 'Ouvert',
+		hub_support_state_closed: 'Fermé',
+		hub_support_state_unknown: 'Inconnu',
+		hub_support_account_management: 'Gestion du compte',
+		hub_support_need_help: "Besoin d'aide ?",
+		hub_support_need_help_more:
+			'Des difficultés pour utiliser vos produits et services ? Consultez dès maintenant nos guides.',
+		hub_support_help: 'Comprendre et utiliser vos services OVHcloud',
+		hub_support_error: "Impossible de récupérer vos demandes d'assistance",
+
+		manager_hub_catalog_items_order: 'Commander'
 	}
 };
 

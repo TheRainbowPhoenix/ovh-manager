@@ -78,7 +78,6 @@
 		<div class="oui-navbar-list__item">
 			<LanguageMenu
 				{setUserLocale}
-				{userLocale}
 				onChange={(show) => {
 					isDropdownOpen = show;
 					$headerCtx.isNotificationsSidebarVisible = false;

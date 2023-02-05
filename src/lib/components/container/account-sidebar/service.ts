@@ -80,6 +80,7 @@ interface PaymentMethodAPI {
 	default?: boolean;
 	description?: string;
 	label?: string;
+	status?: string;
 
 	getStatusCategory: () => string;
 }
@@ -149,7 +150,7 @@ export const PAYMENT_METHOD_STATUS_ENUM = {
 	VALID: 'VALID'
 };
 
-export const paymentMethod = (environment: Environment): PaymentMethod => {
+export const paymentMethod = (environment: Environment) => {
 	const region = environment.getRegion();
 	const user = environment.getUser();
 	// const ovhPaymentMethod = useOvhPaymentMethod({
@@ -188,5 +189,10 @@ export const paymentMethod = (environment: Environment): PaymentMethod => {
 	return {
 		getDefaultPaymentMethod,
 		isEnterpriseAccount
+		// getStatusCategory,
+		// icon,
+		// registerable,
+		// method,
+		// getMethod
 	};
 };

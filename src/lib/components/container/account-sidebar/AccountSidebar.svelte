@@ -29,7 +29,7 @@
 
 <style lang="scss">
 	@import '@ovh-ux/ui-kit/dist/scss/_tokens.scss';
-	@import './sidebar.scss';
+	// @import './sidebar.scss';
 
 	$ovh-sidebar-width: 18.75rem;
 	$jupiter-font-weight: 700;

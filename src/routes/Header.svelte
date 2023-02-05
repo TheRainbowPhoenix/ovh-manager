@@ -19,7 +19,7 @@
 </script>
 
 <NavBar environment={env} />
-<AccountSidebar />
+<AccountSidebar environment={env} />
 <NotificationsSidebar />
 
 <!--
