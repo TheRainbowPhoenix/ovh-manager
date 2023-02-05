@@ -37,7 +37,10 @@ const _t: TranslationsTable = {
 		no_notifications_description: 'You do not have any notifications.',
 
 		user_account_menu_support_level_standard: 'Standard Support',
-		user_account_menu_logout: 'Log out'
+		user_account_menu_logout: 'Log out',
+
+		user_account_menu_title: 'Account',
+		user_account_menu_status_VALID: 'Valid'
 	},
 	fr: {
 		'homepage.title': 'Votre titre',
@@ -71,7 +74,10 @@ const _t: TranslationsTable = {
 		no_notifications_description: "Vous n'avez aucune notification.",
 
 		user_account_menu_support_level_standard: 'Support Standard',
-		user_account_menu_logout: 'Déconnecter'
+		user_account_menu_logout: 'Déconnecter',
+
+		user_account_menu_title: 'Compte',
+		user_account_menu_status_VALID: 'Valide'
 	}
 };
 

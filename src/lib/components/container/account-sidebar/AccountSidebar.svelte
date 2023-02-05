@@ -21,16 +21,18 @@
 >
 	<div class="manager-account-sidebar">
 		<UserInfos {environment} />
-		<PaymentMethod />
+		<PaymentMethod {environment} />
 		<Shortcuts />
 		<UsefulLinks />
 	</div>
 </div>
 
 <style lang="scss">
-	// @import './sidebar.scss';
 	@import '@ovh-ux/ui-kit/dist/scss/_tokens.scss';
+	@import './sidebar.scss';
+
 	$ovh-sidebar-width: 18.75rem;
+	$jupiter-font-weight: 700;
 
 	.manager-account-sidebar-wrapper {
 		position: fixed;

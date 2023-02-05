@@ -20,6 +20,7 @@ export interface User {
 	email?: string;
 	nichandle?: string;
 	organisation?: string;
+	enterprise?: boolean;
 }
 
 export class Environment {
