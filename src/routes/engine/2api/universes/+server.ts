@@ -6,26 +6,26 @@ interface GetRequest {
 
 export const GET: (r: GetRequest) => Response = ({ url }) => {
 	const r = [
-		{ universe: 'hub', url: 'https://www.ovh.com/manager/#/hub', external: false },
+		{ universe: 'hub', url: '/hub', external: false },
 		{
 			universe: 'server',
-			url: 'https://www.ovh.com/manager/#/dedicated/bare-metal-cloud',
+			url: '/dedicated/bare-metal-cloud',
 			external: false
 		},
 		{
 			universe: 'hpc',
-			url: 'https://www.ovh.com/manager/#/dedicated/hosted-private-cloud',
+			url: '/dedicated/hosted-private-cloud',
 			external: false
 		},
 		{
 			universe: 'public-cloud',
-			url: 'https://www.ovh.com/manager/#/public-cloud/?onboarding',
+			url: '/public-cloud/?onboarding',
 			external: false
 		},
-		{ universe: 'web', url: 'https://www.ovh.com/manager/#/web', external: false },
-		{ universe: 'telecom', url: 'https://www.ovhtelecom.fr/manager/#/telecom', external: false },
-		{ universe: 'sunrise', url: 'https://www.ovh.com/manager/sunrise/', external: false },
-		{ universe: 'marketplace', url: 'https://marketplace.ovhcloud.com/', external: true }
+		{ universe: 'web', url: '/web', external: false },
+		{ universe: 'telecom', url: '/telecom', external: false },
+		{ universe: 'sunrise', url: '/sunrise', external: false },
+		{ universe: 'marketplace', url: '/marketplace', external: true }
 	];
 
 	return new Response(JSON.stringify(r));

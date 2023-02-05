@@ -1,8 +1,8 @@
 <svelte:head>
-	<title>Dashboard</title>
-	<meta name="description" content="User Dashboard" />
+	<title>Web Cloud</title>
+	<meta name="description" content="Web Cloud" />
 </svelte:head>
 
 <div class="text-column">
-	<h1>User Dashboard TODO</h1>
+	<h1>Web Cloud TODO</h1>
 </div>
