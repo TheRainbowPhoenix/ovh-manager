@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Preloader from '$lib/components/container/common/preloader/Preloader.svelte';
 	import type Shell from '$lib/components/shell/shell';
 	import { initShell } from '$lib/components/shell/shell';
 
@@ -9,6 +10,8 @@
 	import './styles.css';
 
 	let shell: Shell;
+
+	let preloaderVisible: boolean = false;
 
 	// export let environment: Environment;
 
@@ -32,26 +35,31 @@
 		// 	// const config = () => import(`./config-${environment.getRegion()}.js`);
 
 		console.log(shell.getPlugin('environment').getEnvironment());
+
+		// preloaderVisible = true;
+
 		// });
 		// setContext('shell', shell);
 		// let shell = await initShell();
 	});
 </script>
 
-<div class="app">
-	<div class="managerShell">
-		<div class="managerShell_header">
-			<Header />
-		</div>
-		<div class="managerShell_content">
-			<main>
-				<slot />
-			</main>
-			<iframe title="app" role="document" src="about:blank" />
-		</div>
-		<div class="managerShell_footer">
-			<p>Build with <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-		</div>
+<!-- <Progress animating={progressANimating} />-->
+<div class="managerShell">
+	<!-- Suspense NavReshuffleBetaAccessModal -->
+	<div class="managerShell_header">
+		<Header />
+	</div>
+	<div class="managerShell_content">
+		<!-- if isMfaEnrollmentVisible => MfaEnrollment forced={isMfaEnrollmentForced} onHide={hideMfaEnrollment} -->
+		<Preloader visible={preloaderVisible}>
+			<slot />
+		</Preloader>
+
+		<iframe title="app" role="document" src="about:blank" />
+	</div>
+	<div class="managerShell_footer">
+		<p>Build with <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 	</div>
 </div>
 

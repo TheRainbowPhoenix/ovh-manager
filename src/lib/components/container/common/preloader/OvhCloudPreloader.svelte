@@ -1,4 +1,7 @@
 <script lang="ts">
+	import LoadingMessage from './LoadingMessage.svelte';
+	import WelcomeMessage from './WelcomeMessage.svelte';
+
 	export let visible: boolean = false;
 
 	let numDisplay = 0;
@@ -63,13 +66,13 @@
 			/>
 		</svg>
 		<div>
-			<!-- <svelte:component this={Suspense} fallback=" ">
-				{#if displayWelcome}
-					<svelte:component this={WelcomeMessage} />
-				{:else}
-					<svelte:component this={LoadingMessage} />
-				{/if}
-			</svelte:component> -->
+			<!-- <svelte:component this={Suspense} fallback=" "> -->
+			{#if displayWelcome}
+				<WelcomeMessage />
+			{:else}
+				<LoadingMessage />
+			{/if}
+			<!-- </svelte:component> -->
 		</div>
 	</div>
 </div>
