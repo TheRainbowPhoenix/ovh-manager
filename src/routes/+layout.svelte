@@ -36,7 +36,7 @@
 
 		console.log(shell.getPlugin('environment').getEnvironment());
 
-		// preloaderVisible = true;
+		preloaderVisible = true;
 
 		// });
 		// setContext('shell', shell);

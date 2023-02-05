@@ -17,7 +17,13 @@
 			<ul class="oui-navbar-list">
 				{#each languages as { name, key }}
 					<li class="oui-navbar-list__item">
-						<button type="button" class="oui-navbar-link oui-navbar-link_tertiary p-0">
+						<button
+							type="button"
+							class="oui-navbar-link oui-navbar-link_tertiary p-0"
+							on:click={() => {
+								onSelect(key);
+							}}
+						>
 							{name}
 						</button>
 					</li>

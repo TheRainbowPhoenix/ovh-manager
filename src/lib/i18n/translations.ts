@@ -34,7 +34,10 @@ const _t: TranslationsTable = {
 		notification_read: 'Read',
 		notification_unread: 'Unread',
 		no_notifications_title: 'You are up to date!',
-		no_notifications_description: 'You do not have any notifications.'
+		no_notifications_description: 'You do not have any notifications.',
+
+		user_account_menu_support_level_standard: 'Standard Support',
+		user_account_menu_logout: 'Log out'
 	},
 	fr: {
 		'homepage.title': 'Votre titre',
@@ -65,7 +68,10 @@ const _t: TranslationsTable = {
 		notification_read: 'Lu',
 		notification_unread: 'Non lu',
 		no_notifications_title: 'Vous êtes à jour !',
-		no_notifications_description: "Vous n'avez aucune notification."
+		no_notifications_description: "Vous n'avez aucune notification.",
+
+		user_account_menu_support_level_standard: 'Support Standard',
+		user_account_menu_logout: 'Déconnecter'
 	}
 };
 

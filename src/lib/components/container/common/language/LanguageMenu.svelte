@@ -1,14 +1,20 @@
 <script lang="ts">
-	import { getAvailableLanguages, getCurrentLanguage } from '$lib/i18n';
+	import { getAvailableLanguages, getCurrentLanguage, userLocale } from '$lib/i18n';
 	import type { Writable } from 'svelte/store';
 	import LanguageButton from './LanguageButton.svelte';
 	import LanguageList from './LanguageList.svelte';
 
 	export let onChange: (show: boolean) => void;
 	export let setUserLocale: (locale: string) => void;
-	export let userLocale: Writable<string>;
+	// export let userLocale: Writable<string>;
 
 	let show = false;
+
+	let currentLangLabel = getCurrentLanguage().name;
+
+	userLocale.subscribe((l) => {
+		currentLangLabel = getCurrentLanguage().name;
+	});
 
 	const getLanguageLabel = () => {
 		return getCurrentLanguage();
@@ -28,7 +34,7 @@
 {:else}
 	<div class="oui-navbar-dropdown">
 		<LanguageButton {show} on:click={() => (show = !show)}>
-			{getLanguageLabel().name}
+			{currentLangLabel}
 		</LanguageButton>
 		<LanguageList hidden={!show} languages={availableLanguages} onSelect={onLocaleChange} />
 	</div>

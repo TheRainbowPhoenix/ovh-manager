@@ -8,4 +8,8 @@ export type HeaderContextType = {
 	setIsNotificationsSidebarVisible(isVisible: boolean): void;
 };
 
-export const headerCtx = writable<HeaderContextType>({} as HeaderContextType);
+export const headerCtx = writable<HeaderContextType>({
+	isAccountSidebarVisible: true,
+	isAccountSidebarLargeScreenDisplayForced: true,
+	isNotificationsSidebarVisible: false
+} as HeaderContextType);

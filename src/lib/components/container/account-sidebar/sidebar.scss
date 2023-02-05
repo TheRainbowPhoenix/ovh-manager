@@ -1,0 +1,5262 @@
+.manager-account-sidebar-wrapper {
+	position: fixed;
+	top: 2.75rem;
+	bottom: 0;
+	right: 0;
+	z-index: 99;
+	overflow-x: hidden;
+	overflow-y: auto;
+	transition: padding 0.1s ease-out, opacity 0.2s ease-out;
+	box-shadow: 0 4px 6px rgba(0, 14, 156, 0.2);
+	opacity: 0;
+	padding-left: 18.75rem;
+	pointer-events: none;
+}
+
+.manager-account-sidebar-wrapper .manager-account-sidebar {
+	width: 0;
+}
+
+.manager-account-sidebar-wrapper .manager-account-sidebar a,
+.manager-account-sidebar-wrapper .manager-account-sidebar button {
+	pointer-events: none;
+}
+
+@media screen and (min-width: 1279px) {
+	.manager-account-sidebar-wrapper.force-large-screen-display {
+		width: 18.75rem;
+		padding-left: 0;
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.manager-account-sidebar-wrapper.force-large-screen-display .manager-account-sidebar {
+		width: 18.75rem;
+	}
+
+	.manager-account-sidebar-wrapper.force-large-screen-display .manager-account-sidebar a,
+	.manager-account-sidebar-wrapper.force-large-screen-display .manager-account-sidebar button {
+		pointer-events: auto;
+	}
+}
+
+.manager-account-sidebar-wrapper[aria-expanded='true'] {
+	width: 18.75rem;
+	padding-left: 0;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.manager-account-sidebar-wrapper[aria-expanded='true'] .manager-account-sidebar {
+	width: 18.75rem;
+}
+
+.manager-account-sidebar-wrapper[aria-expanded='true'] .manager-account-sidebar a,
+.manager-account-sidebar-wrapper[aria-expanded='true'] .manager-account-sidebar button {
+	pointer-events: auto;
+}
+
+.manager-account-sidebar {
+	background-color: #def8ff;
+	height: 100%;
+	padding: 3rem 2rem 2rem;
+	overflow: auto;
+}
+
+.manager-account-sidebar .align-baseline {
+	vertical-align: baseline !important;
+}
+
+.manager-account-sidebar .align-top {
+	vertical-align: top !important;
+}
+
+.manager-account-sidebar .align-middle {
+	vertical-align: middle !important;
+}
+
+.manager-account-sidebar .align-bottom {
+	vertical-align: bottom !important;
+}
+
+.manager-account-sidebar .align-text-bottom {
+	vertical-align: text-bottom !important;
+}
+
+.manager-account-sidebar .align-text-top {
+	vertical-align: text-top !important;
+}
+
+.manager-account-sidebar .bg-primary {
+	background-color: #007bff !important;
+}
+
+.manager-account-sidebar a.bg-primary:hover,
+.manager-account-sidebar a.bg-primary:focus,
+.manager-account-sidebar button.bg-primary:hover,
+.manager-account-sidebar button.bg-primary:focus {
+	background-color: #0062cc !important;
+}
+
+.manager-account-sidebar .bg-secondary {
+	background-color: #6c757d !important;
+}
+
+.manager-account-sidebar a.bg-secondary:hover,
+.manager-account-sidebar a.bg-secondary:focus,
+.manager-account-sidebar button.bg-secondary:hover,
+.manager-account-sidebar button.bg-secondary:focus {
+	background-color: #545b62 !important;
+}
+
+.manager-account-sidebar .bg-success {
+	background-color: #28a745 !important;
+}
+
+.manager-account-sidebar a.bg-success:hover,
+.manager-account-sidebar a.bg-success:focus,
+.manager-account-sidebar button.bg-success:hover,
+.manager-account-sidebar button.bg-success:focus {
+	background-color: #1e7e34 !important;
+}
+
+.manager-account-sidebar .bg-info {
+	background-color: #17a2b8 !important;
+}
+
+.manager-account-sidebar a.bg-info:hover,
+.manager-account-sidebar a.bg-info:focus,
+.manager-account-sidebar button.bg-info:hover,
+.manager-account-sidebar button.bg-info:focus {
+	background-color: #117a8b !important;
+}
+
+.manager-account-sidebar .bg-warning {
+	background-color: #ffc107 !important;
+}
+
+.manager-account-sidebar a.bg-warning:hover,
+.manager-account-sidebar a.bg-warning:focus,
+.manager-account-sidebar button.bg-warning:hover,
+.manager-account-sidebar button.bg-warning:focus {
+	background-color: #d39e00 !important;
+}
+
+.manager-account-sidebar .bg-danger {
+	background-color: #dc3545 !important;
+}
+
+.manager-account-sidebar a.bg-danger:hover,
+.manager-account-sidebar a.bg-danger:focus,
+.manager-account-sidebar button.bg-danger:hover,
+.manager-account-sidebar button.bg-danger:focus {
+	background-color: #bd2130 !important;
+}
+
+.manager-account-sidebar .bg-light {
+	background-color: #f8f9fa !important;
+}
+
+.manager-account-sidebar a.bg-light:hover,
+.manager-account-sidebar a.bg-light:focus,
+.manager-account-sidebar button.bg-light:hover,
+.manager-account-sidebar button.bg-light:focus {
+	background-color: #dae0e5 !important;
+}
+
+.manager-account-sidebar .bg-dark {
+	background-color: #343a40 !important;
+}
+
+.manager-account-sidebar a.bg-dark:hover,
+.manager-account-sidebar a.bg-dark:focus,
+.manager-account-sidebar button.bg-dark:hover,
+.manager-account-sidebar button.bg-dark:focus {
+	background-color: #1d2124 !important;
+}
+
+.manager-account-sidebar .bg-white {
+	background-color: #fff !important;
+}
+
+.manager-account-sidebar .bg-transparent {
+	background-color: transparent !important;
+}
+
+.manager-account-sidebar .border {
+	border: 1px solid #dee2e6 !important;
+}
+
+.manager-account-sidebar .border-top {
+	border-top: 1px solid #dee2e6 !important;
+}
+
+.manager-account-sidebar .border-right {
+	border-right: 1px solid #dee2e6 !important;
+}
+
+.manager-account-sidebar .border-bottom {
+	border-bottom: 1px solid #dee2e6 !important;
+}
+
+.manager-account-sidebar .border-left {
+	border-left: 1px solid #dee2e6 !important;
+}
+
+.manager-account-sidebar .border-0 {
+	border: 0 !important;
+}
+
+.manager-account-sidebar .border-top-0 {
+	border-top: 0 !important;
+}
+
+.manager-account-sidebar .border-right-0 {
+	border-right: 0 !important;
+}
+
+.manager-account-sidebar .border-bottom-0 {
+	border-bottom: 0 !important;
+}
+
+.manager-account-sidebar .border-left-0 {
+	border-left: 0 !important;
+}
+
+.manager-account-sidebar .border-primary {
+	border-color: #007bff !important;
+}
+
+.manager-account-sidebar .border-secondary {
+	border-color: #6c757d !important;
+}
+
+.manager-account-sidebar .border-success {
+	border-color: #28a745 !important;
+}
+
+.manager-account-sidebar .border-info {
+	border-color: #17a2b8 !important;
+}
+
+.manager-account-sidebar .border-warning {
+	border-color: #ffc107 !important;
+}
+
+.manager-account-sidebar .border-danger {
+	border-color: #dc3545 !important;
+}
+
+.manager-account-sidebar .border-light {
+	border-color: #f8f9fa !important;
+}
+
+.manager-account-sidebar .border-dark {
+	border-color: #343a40 !important;
+}
+
+.manager-account-sidebar .border-white {
+	border-color: #fff !important;
+}
+
+.manager-account-sidebar .rounded {
+	border-radius: 0.25rem !important;
+}
+
+.manager-account-sidebar .rounded-top {
+	border-top-left-radius: 0.25rem !important;
+	border-top-right-radius: 0.25rem !important;
+}
+
+.manager-account-sidebar .rounded-right {
+	border-top-right-radius: 0.25rem !important;
+	border-bottom-right-radius: 0.25rem !important;
+}
+
+.manager-account-sidebar .rounded-bottom {
+	border-bottom-right-radius: 0.25rem !important;
+	border-bottom-left-radius: 0.25rem !important;
+}
+
+.manager-account-sidebar .rounded-left {
+	border-top-left-radius: 0.25rem !important;
+	border-bottom-left-radius: 0.25rem !important;
+}
+
+.manager-account-sidebar .rounded-circle {
+	border-radius: 50% !important;
+}
+
+.manager-account-sidebar .rounded-0 {
+	border-radius: 0 !important;
+}
+
+.manager-account-sidebar .clearfix:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+.manager-account-sidebar .d-none {
+	display: none !important;
+}
+
+.manager-account-sidebar .d-inline {
+	display: inline !important;
+}
+
+.manager-account-sidebar .d-inline-block {
+	display: inline-block !important;
+}
+
+.manager-account-sidebar .d-block {
+	display: block !important;
+}
+
+.manager-account-sidebar .d-table {
+	display: table !important;
+}
+
+.manager-account-sidebar .d-table-row {
+	display: table-row !important;
+}
+
+.manager-account-sidebar .d-table-cell {
+	display: table-cell !important;
+}
+
+.manager-account-sidebar .d-flex {
+	display: flex !important;
+}
+
+.manager-account-sidebar .d-inline-flex {
+	display: inline-flex !important;
+}
+
+@media (min-width: 576px) {
+	.manager-account-sidebar .d-sm-none {
+		display: none !important;
+	}
+
+	.manager-account-sidebar .d-sm-inline {
+		display: inline !important;
+	}
+
+	.manager-account-sidebar .d-sm-inline-block {
+		display: inline-block !important;
+	}
+
+	.manager-account-sidebar .d-sm-block {
+		display: block !important;
+	}
+
+	.manager-account-sidebar .d-sm-table {
+		display: table !important;
+	}
+
+	.manager-account-sidebar .d-sm-table-row {
+		display: table-row !important;
+	}
+
+	.manager-account-sidebar .d-sm-table-cell {
+		display: table-cell !important;
+	}
+
+	.manager-account-sidebar .d-sm-flex {
+		display: flex !important;
+	}
+
+	.manager-account-sidebar .d-sm-inline-flex {
+		display: inline-flex !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.manager-account-sidebar .d-md-none {
+		display: none !important;
+	}
+
+	.manager-account-sidebar .d-md-inline {
+		display: inline !important;
+	}
+
+	.manager-account-sidebar .d-md-inline-block {
+		display: inline-block !important;
+	}
+
+	.manager-account-sidebar .d-md-block {
+		display: block !important;
+	}
+
+	.manager-account-sidebar .d-md-table {
+		display: table !important;
+	}
+
+	.manager-account-sidebar .d-md-table-row {
+		display: table-row !important;
+	}
+
+	.manager-account-sidebar .d-md-table-cell {
+		display: table-cell !important;
+	}
+
+	.manager-account-sidebar .d-md-flex {
+		display: flex !important;
+	}
+
+	.manager-account-sidebar .d-md-inline-flex {
+		display: inline-flex !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.manager-account-sidebar .d-lg-none {
+		display: none !important;
+	}
+
+	.manager-account-sidebar .d-lg-inline {
+		display: inline !important;
+	}
+
+	.manager-account-sidebar .d-lg-inline-block {
+		display: inline-block !important;
+	}
+
+	.manager-account-sidebar .d-lg-block {
+		display: block !important;
+	}
+
+	.manager-account-sidebar .d-lg-table {
+		display: table !important;
+	}
+
+	.manager-account-sidebar .d-lg-table-row {
+		display: table-row !important;
+	}
+
+	.manager-account-sidebar .d-lg-table-cell {
+		display: table-cell !important;
+	}
+
+	.manager-account-sidebar .d-lg-flex {
+		display: flex !important;
+	}
+
+	.manager-account-sidebar .d-lg-inline-flex {
+		display: inline-flex !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.manager-account-sidebar .d-xl-none {
+		display: none !important;
+	}
+
+	.manager-account-sidebar .d-xl-inline {
+		display: inline !important;
+	}
+
+	.manager-account-sidebar .d-xl-inline-block {
+		display: inline-block !important;
+	}
+
+	.manager-account-sidebar .d-xl-block {
+		display: block !important;
+	}
+
+	.manager-account-sidebar .d-xl-table {
+		display: table !important;
+	}
+
+	.manager-account-sidebar .d-xl-table-row {
+		display: table-row !important;
+	}
+
+	.manager-account-sidebar .d-xl-table-cell {
+		display: table-cell !important;
+	}
+
+	.manager-account-sidebar .d-xl-flex {
+		display: flex !important;
+	}
+
+	.manager-account-sidebar .d-xl-inline-flex {
+		display: inline-flex !important;
+	}
+}
+
+@media print {
+	.manager-account-sidebar .d-print-none {
+		display: none !important;
+	}
+
+	.manager-account-sidebar .d-print-inline {
+		display: inline !important;
+	}
+
+	.manager-account-sidebar .d-print-inline-block {
+		display: inline-block !important;
+	}
+
+	.manager-account-sidebar .d-print-block {
+		display: block !important;
+	}
+
+	.manager-account-sidebar .d-print-table {
+		display: table !important;
+	}
+
+	.manager-account-sidebar .d-print-table-row {
+		display: table-row !important;
+	}
+
+	.manager-account-sidebar .d-print-table-cell {
+		display: table-cell !important;
+	}
+
+	.manager-account-sidebar .d-print-flex {
+		display: flex !important;
+	}
+
+	.manager-account-sidebar .d-print-inline-flex {
+		display: inline-flex !important;
+	}
+}
+
+.manager-account-sidebar .embed-responsive {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 0;
+	overflow: hidden;
+}
+
+.manager-account-sidebar .embed-responsive:before {
+	display: block;
+	content: '';
+}
+
+.manager-account-sidebar .embed-responsive .embed-responsive-item,
+.manager-account-sidebar .embed-responsive iframe,
+.manager-account-sidebar .embed-responsive embed,
+.manager-account-sidebar .embed-responsive object,
+.manager-account-sidebar .embed-responsive video {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+.manager-account-sidebar .embed-responsive-21by9:before {
+	padding-top: 42.8571428571%;
+}
+
+.manager-account-sidebar .embed-responsive-16by9:before {
+	padding-top: 56.25%;
+}
+
+.manager-account-sidebar .embed-responsive-4by3:before {
+	padding-top: 75%;
+}
+
+.manager-account-sidebar .embed-responsive-1by1:before {
+	padding-top: 100%;
+}
+
+.manager-account-sidebar .flex-row {
+	flex-direction: row !important;
+}
+
+.manager-account-sidebar .flex-column {
+	flex-direction: column !important;
+}
+
+.manager-account-sidebar .flex-row-reverse {
+	flex-direction: row-reverse !important;
+}
+
+.manager-account-sidebar .flex-column-reverse {
+	flex-direction: column-reverse !important;
+}
+
+.manager-account-sidebar .flex-wrap {
+	flex-wrap: wrap !important;
+}
+
+.manager-account-sidebar .flex-nowrap {
+	flex-wrap: nowrap !important;
+}
+
+.manager-account-sidebar .flex-wrap-reverse {
+	flex-wrap: wrap-reverse !important;
+}
+
+.manager-account-sidebar .justify-content-start {
+	justify-content: flex-start !important;
+}
+
+.manager-account-sidebar .justify-content-end {
+	justify-content: flex-end !important;
+}
+
+.manager-account-sidebar .justify-content-center {
+	justify-content: center !important;
+}
+
+.manager-account-sidebar .justify-content-between {
+	justify-content: space-between !important;
+}
+
+.manager-account-sidebar .justify-content-around {
+	justify-content: space-around !important;
+}
+
+.manager-account-sidebar .align-items-start {
+	align-items: flex-start !important;
+}
+
+.manager-account-sidebar .align-items-end {
+	align-items: flex-end !important;
+}
+
+.manager-account-sidebar .align-items-center {
+	align-items: center !important;
+}
+
+.manager-account-sidebar .align-items-baseline {
+	align-items: baseline !important;
+}
+
+.manager-account-sidebar .align-items-stretch {
+	align-items: stretch !important;
+}
+
+.manager-account-sidebar .align-content-start {
+	align-content: flex-start !important;
+}
+
+.manager-account-sidebar .align-content-end {
+	align-content: flex-end !important;
+}
+
+.manager-account-sidebar .align-content-center {
+	align-content: center !important;
+}
+
+.manager-account-sidebar .align-content-between {
+	align-content: space-between !important;
+}
+
+.manager-account-sidebar .align-content-around {
+	align-content: space-around !important;
+}
+
+.manager-account-sidebar .align-content-stretch {
+	align-content: stretch !important;
+}
+
+.manager-account-sidebar .align-self-auto {
+	align-self: auto !important;
+}
+
+.manager-account-sidebar .align-self-start {
+	align-self: flex-start !important;
+}
+
+.manager-account-sidebar .align-self-end {
+	align-self: flex-end !important;
+}
+
+.manager-account-sidebar .align-self-center {
+	align-self: center !important;
+}
+
+.manager-account-sidebar .align-self-baseline {
+	align-self: baseline !important;
+}
+
+.manager-account-sidebar .align-self-stretch {
+	align-self: stretch !important;
+}
+
+@media (min-width: 576px) {
+	.manager-account-sidebar .flex-sm-row {
+		flex-direction: row !important;
+	}
+
+	.manager-account-sidebar .flex-sm-column {
+		flex-direction: column !important;
+	}
+
+	.manager-account-sidebar .flex-sm-row-reverse {
+		flex-direction: row-reverse !important;
+	}
+
+	.manager-account-sidebar .flex-sm-column-reverse {
+		flex-direction: column-reverse !important;
+	}
+
+	.manager-account-sidebar .flex-sm-wrap {
+		flex-wrap: wrap !important;
+	}
+
+	.manager-account-sidebar .flex-sm-nowrap {
+		flex-wrap: nowrap !important;
+	}
+
+	.manager-account-sidebar .flex-sm-wrap-reverse {
+		flex-wrap: wrap-reverse !important;
+	}
+
+	.manager-account-sidebar .justify-content-sm-start {
+		justify-content: flex-start !important;
+	}
+
+	.manager-account-sidebar .justify-content-sm-end {
+		justify-content: flex-end !important;
+	}
+
+	.manager-account-sidebar .justify-content-sm-center {
+		justify-content: center !important;
+	}
+
+	.manager-account-sidebar .justify-content-sm-between {
+		justify-content: space-between !important;
+	}
+
+	.manager-account-sidebar .justify-content-sm-around {
+		justify-content: space-around !important;
+	}
+
+	.manager-account-sidebar .align-items-sm-start {
+		align-items: flex-start !important;
+	}
+
+	.manager-account-sidebar .align-items-sm-end {
+		align-items: flex-end !important;
+	}
+
+	.manager-account-sidebar .align-items-sm-center {
+		align-items: center !important;
+	}
+
+	.manager-account-sidebar .align-items-sm-baseline {
+		align-items: baseline !important;
+	}
+
+	.manager-account-sidebar .align-items-sm-stretch {
+		align-items: stretch !important;
+	}
+
+	.manager-account-sidebar .align-content-sm-start {
+		align-content: flex-start !important;
+	}
+
+	.manager-account-sidebar .align-content-sm-end {
+		align-content: flex-end !important;
+	}
+
+	.manager-account-sidebar .align-content-sm-center {
+		align-content: center !important;
+	}
+
+	.manager-account-sidebar .align-content-sm-between {
+		align-content: space-between !important;
+	}
+
+	.manager-account-sidebar .align-content-sm-around {
+		align-content: space-around !important;
+	}
+
+	.manager-account-sidebar .align-content-sm-stretch {
+		align-content: stretch !important;
+	}
+
+	.manager-account-sidebar .align-self-sm-auto {
+		align-self: auto !important;
+	}
+
+	.manager-account-sidebar .align-self-sm-start {
+		align-self: flex-start !important;
+	}
+
+	.manager-account-sidebar .align-self-sm-end {
+		align-self: flex-end !important;
+	}
+
+	.manager-account-sidebar .align-self-sm-center {
+		align-self: center !important;
+	}
+
+	.manager-account-sidebar .align-self-sm-baseline {
+		align-self: baseline !important;
+	}
+
+	.manager-account-sidebar .align-self-sm-stretch {
+		align-self: stretch !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.manager-account-sidebar .flex-md-row {
+		flex-direction: row !important;
+	}
+
+	.manager-account-sidebar .flex-md-column {
+		flex-direction: column !important;
+	}
+
+	.manager-account-sidebar .flex-md-row-reverse {
+		flex-direction: row-reverse !important;
+	}
+
+	.manager-account-sidebar .flex-md-column-reverse {
+		flex-direction: column-reverse !important;
+	}
+
+	.manager-account-sidebar .flex-md-wrap {
+		flex-wrap: wrap !important;
+	}
+
+	.manager-account-sidebar .flex-md-nowrap {
+		flex-wrap: nowrap !important;
+	}
+
+	.manager-account-sidebar .flex-md-wrap-reverse {
+		flex-wrap: wrap-reverse !important;
+	}
+
+	.manager-account-sidebar .justify-content-md-start {
+		justify-content: flex-start !important;
+	}
+
+	.manager-account-sidebar .justify-content-md-end {
+		justify-content: flex-end !important;
+	}
+
+	.manager-account-sidebar .justify-content-md-center {
+		justify-content: center !important;
+	}
+
+	.manager-account-sidebar .justify-content-md-between {
+		justify-content: space-between !important;
+	}
+
+	.manager-account-sidebar .justify-content-md-around {
+		justify-content: space-around !important;
+	}
+
+	.manager-account-sidebar .align-items-md-start {
+		align-items: flex-start !important;
+	}
+
+	.manager-account-sidebar .align-items-md-end {
+		align-items: flex-end !important;
+	}
+
+	.manager-account-sidebar .align-items-md-center {
+		align-items: center !important;
+	}
+
+	.manager-account-sidebar .align-items-md-baseline {
+		align-items: baseline !important;
+	}
+
+	.manager-account-sidebar .align-items-md-stretch {
+		align-items: stretch !important;
+	}
+
+	.manager-account-sidebar .align-content-md-start {
+		align-content: flex-start !important;
+	}
+
+	.manager-account-sidebar .align-content-md-end {
+		align-content: flex-end !important;
+	}
+
+	.manager-account-sidebar .align-content-md-center {
+		align-content: center !important;
+	}
+
+	.manager-account-sidebar .align-content-md-between {
+		align-content: space-between !important;
+	}
+
+	.manager-account-sidebar .align-content-md-around {
+		align-content: space-around !important;
+	}
+
+	.manager-account-sidebar .align-content-md-stretch {
+		align-content: stretch !important;
+	}
+
+	.manager-account-sidebar .align-self-md-auto {
+		align-self: auto !important;
+	}
+
+	.manager-account-sidebar .align-self-md-start {
+		align-self: flex-start !important;
+	}
+
+	.manager-account-sidebar .align-self-md-end {
+		align-self: flex-end !important;
+	}
+
+	.manager-account-sidebar .align-self-md-center {
+		align-self: center !important;
+	}
+
+	.manager-account-sidebar .align-self-md-baseline {
+		align-self: baseline !important;
+	}
+
+	.manager-account-sidebar .align-self-md-stretch {
+		align-self: stretch !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.manager-account-sidebar .flex-lg-row {
+		flex-direction: row !important;
+	}
+
+	.manager-account-sidebar .flex-lg-column {
+		flex-direction: column !important;
+	}
+
+	.manager-account-sidebar .flex-lg-row-reverse {
+		flex-direction: row-reverse !important;
+	}
+
+	.manager-account-sidebar .flex-lg-column-reverse {
+		flex-direction: column-reverse !important;
+	}
+
+	.manager-account-sidebar .flex-lg-wrap {
+		flex-wrap: wrap !important;
+	}
+
+	.manager-account-sidebar .flex-lg-nowrap {
+		flex-wrap: nowrap !important;
+	}
+
+	.manager-account-sidebar .flex-lg-wrap-reverse {
+		flex-wrap: wrap-reverse !important;
+	}
+
+	.manager-account-sidebar .justify-content-lg-start {
+		justify-content: flex-start !important;
+	}
+
+	.manager-account-sidebar .justify-content-lg-end {
+		justify-content: flex-end !important;
+	}
+
+	.manager-account-sidebar .justify-content-lg-center {
+		justify-content: center !important;
+	}
+
+	.manager-account-sidebar .justify-content-lg-between {
+		justify-content: space-between !important;
+	}
+
+	.manager-account-sidebar .justify-content-lg-around {
+		justify-content: space-around !important;
+	}
+
+	.manager-account-sidebar .align-items-lg-start {
+		align-items: flex-start !important;
+	}
+
+	.manager-account-sidebar .align-items-lg-end {
+		align-items: flex-end !important;
+	}
+
+	.manager-account-sidebar .align-items-lg-center {
+		align-items: center !important;
+	}
+
+	.manager-account-sidebar .align-items-lg-baseline {
+		align-items: baseline !important;
+	}
+
+	.manager-account-sidebar .align-items-lg-stretch {
+		align-items: stretch !important;
+	}
+
+	.manager-account-sidebar .align-content-lg-start {
+		align-content: flex-start !important;
+	}
+
+	.manager-account-sidebar .align-content-lg-end {
+		align-content: flex-end !important;
+	}
+
+	.manager-account-sidebar .align-content-lg-center {
+		align-content: center !important;
+	}
+
+	.manager-account-sidebar .align-content-lg-between {
+		align-content: space-between !important;
+	}
+
+	.manager-account-sidebar .align-content-lg-around {
+		align-content: space-around !important;
+	}
+
+	.manager-account-sidebar .align-content-lg-stretch {
+		align-content: stretch !important;
+	}
+
+	.manager-account-sidebar .align-self-lg-auto {
+		align-self: auto !important;
+	}
+
+	.manager-account-sidebar .align-self-lg-start {
+		align-self: flex-start !important;
+	}
+
+	.manager-account-sidebar .align-self-lg-end {
+		align-self: flex-end !important;
+	}
+
+	.manager-account-sidebar .align-self-lg-center {
+		align-self: center !important;
+	}
+
+	.manager-account-sidebar .align-self-lg-baseline {
+		align-self: baseline !important;
+	}
+
+	.manager-account-sidebar .align-self-lg-stretch {
+		align-self: stretch !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.manager-account-sidebar .flex-xl-row {
+		flex-direction: row !important;
+	}
+
+	.manager-account-sidebar .flex-xl-column {
+		flex-direction: column !important;
+	}
+
+	.manager-account-sidebar .flex-xl-row-reverse {
+		flex-direction: row-reverse !important;
+	}
+
+	.manager-account-sidebar .flex-xl-column-reverse {
+		flex-direction: column-reverse !important;
+	}
+
+	.manager-account-sidebar .flex-xl-wrap {
+		flex-wrap: wrap !important;
+	}
+
+	.manager-account-sidebar .flex-xl-nowrap {
+		flex-wrap: nowrap !important;
+	}
+
+	.manager-account-sidebar .flex-xl-wrap-reverse {
+		flex-wrap: wrap-reverse !important;
+	}
+
+	.manager-account-sidebar .justify-content-xl-start {
+		justify-content: flex-start !important;
+	}
+
+	.manager-account-sidebar .justify-content-xl-end {
+		justify-content: flex-end !important;
+	}
+
+	.manager-account-sidebar .justify-content-xl-center {
+		justify-content: center !important;
+	}
+
+	.manager-account-sidebar .justify-content-xl-between {
+		justify-content: space-between !important;
+	}
+
+	.manager-account-sidebar .justify-content-xl-around {
+		justify-content: space-around !important;
+	}
+
+	.manager-account-sidebar .align-items-xl-start {
+		align-items: flex-start !important;
+	}
+
+	.manager-account-sidebar .align-items-xl-end {
+		align-items: flex-end !important;
+	}
+
+	.manager-account-sidebar .align-items-xl-center {
+		align-items: center !important;
+	}
+
+	.manager-account-sidebar .align-items-xl-baseline {
+		align-items: baseline !important;
+	}
+
+	.manager-account-sidebar .align-items-xl-stretch {
+		align-items: stretch !important;
+	}
+
+	.manager-account-sidebar .align-content-xl-start {
+		align-content: flex-start !important;
+	}
+
+	.manager-account-sidebar .align-content-xl-end {
+		align-content: flex-end !important;
+	}
+
+	.manager-account-sidebar .align-content-xl-center {
+		align-content: center !important;
+	}
+
+	.manager-account-sidebar .align-content-xl-between {
+		align-content: space-between !important;
+	}
+
+	.manager-account-sidebar .align-content-xl-around {
+		align-content: space-around !important;
+	}
+
+	.manager-account-sidebar .align-content-xl-stretch {
+		align-content: stretch !important;
+	}
+
+	.manager-account-sidebar .align-self-xl-auto {
+		align-self: auto !important;
+	}
+
+	.manager-account-sidebar .align-self-xl-start {
+		align-self: flex-start !important;
+	}
+
+	.manager-account-sidebar .align-self-xl-end {
+		align-self: flex-end !important;
+	}
+
+	.manager-account-sidebar .align-self-xl-center {
+		align-self: center !important;
+	}
+
+	.manager-account-sidebar .align-self-xl-baseline {
+		align-self: baseline !important;
+	}
+
+	.manager-account-sidebar .align-self-xl-stretch {
+		align-self: stretch !important;
+	}
+}
+
+.manager-account-sidebar .float-left {
+	float: left !important;
+}
+
+.manager-account-sidebar .float-right {
+	float: right !important;
+}
+
+.manager-account-sidebar .float-none {
+	float: none !important;
+}
+
+@media (min-width: 576px) {
+	.manager-account-sidebar .float-sm-left {
+		float: left !important;
+	}
+
+	.manager-account-sidebar .float-sm-right {
+		float: right !important;
+	}
+
+	.manager-account-sidebar .float-sm-none {
+		float: none !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.manager-account-sidebar .float-md-left {
+		float: left !important;
+	}
+
+	.manager-account-sidebar .float-md-right {
+		float: right !important;
+	}
+
+	.manager-account-sidebar .float-md-none {
+		float: none !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.manager-account-sidebar .float-lg-left {
+		float: left !important;
+	}
+
+	.manager-account-sidebar .float-lg-right {
+		float: right !important;
+	}
+
+	.manager-account-sidebar .float-lg-none {
+		float: none !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.manager-account-sidebar .float-xl-left {
+		float: left !important;
+	}
+
+	.manager-account-sidebar .float-xl-right {
+		float: right !important;
+	}
+
+	.manager-account-sidebar .float-xl-none {
+		float: none !important;
+	}
+}
+
+.manager-account-sidebar .position-static {
+	position: static !important;
+}
+
+.manager-account-sidebar .position-relative {
+	position: relative !important;
+}
+
+.manager-account-sidebar .position-absolute {
+	position: absolute !important;
+}
+
+.manager-account-sidebar .position-fixed {
+	position: fixed !important;
+}
+
+.manager-account-sidebar .position-sticky {
+	position: sticky !important;
+}
+
+.manager-account-sidebar .fixed-top {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+}
+
+.manager-account-sidebar .fixed-bottom {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1030;
+}
+
+@supports (position: sticky) {
+	.manager-account-sidebar .sticky-top {
+		position: sticky;
+		top: 0;
+		z-index: 1020;
+	}
+}
+
+.manager-account-sidebar .sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	clip-path: inset(50%);
+	border: 0;
+}
+
+.manager-account-sidebar .sr-only-focusable:active,
+.manager-account-sidebar .sr-only-focusable:focus {
+	position: static;
+	width: auto;
+	height: auto;
+	overflow: visible;
+	clip: auto;
+	white-space: normal;
+	clip-path: none;
+}
+
+.manager-account-sidebar .w-25 {
+	width: 25% !important;
+}
+
+.manager-account-sidebar .w-50 {
+	width: 50% !important;
+}
+
+.manager-account-sidebar .w-75 {
+	width: 75% !important;
+}
+
+.manager-account-sidebar .w-100 {
+	width: 100% !important;
+}
+
+.manager-account-sidebar .h-25 {
+	height: 25% !important;
+}
+
+.manager-account-sidebar .h-50 {
+	height: 50% !important;
+}
+
+.manager-account-sidebar .h-75 {
+	height: 75% !important;
+}
+
+.manager-account-sidebar .h-100 {
+	height: 100% !important;
+}
+
+.manager-account-sidebar .mw-100 {
+	max-width: 100% !important;
+}
+
+.manager-account-sidebar .mh-100 {
+	max-height: 100% !important;
+}
+
+.manager-account-sidebar .m-0 {
+	margin: 0 !important;
+}
+
+.manager-account-sidebar .mt-0,
+.manager-account-sidebar .my-0 {
+	margin-top: 0 !important;
+}
+
+.manager-account-sidebar .mr-0,
+.manager-account-sidebar .mx-0 {
+	margin-right: 0 !important;
+}
+
+.manager-account-sidebar .mb-0,
+.manager-account-sidebar .my-0 {
+	margin-bottom: 0 !important;
+}
+
+.manager-account-sidebar .ml-0,
+.manager-account-sidebar .mx-0 {
+	margin-left: 0 !important;
+}
+
+.manager-account-sidebar .m-1 {
+	margin: 0.25rem !important;
+}
+
+.manager-account-sidebar .mt-1,
+.manager-account-sidebar .my-1 {
+	margin-top: 0.25rem !important;
+}
+
+.manager-account-sidebar .mr-1,
+.manager-account-sidebar .mx-1 {
+	margin-right: 0.25rem !important;
+}
+
+.manager-account-sidebar .mb-1,
+.manager-account-sidebar .my-1 {
+	margin-bottom: 0.25rem !important;
+}
+
+.manager-account-sidebar .ml-1,
+.manager-account-sidebar .mx-1 {
+	margin-left: 0.25rem !important;
+}
+
+.manager-account-sidebar .m-2 {
+	margin: 0.5rem !important;
+}
+
+.manager-account-sidebar .mt-2,
+.manager-account-sidebar .my-2 {
+	margin-top: 0.5rem !important;
+}
+
+.manager-account-sidebar .mr-2,
+.manager-account-sidebar .mx-2 {
+	margin-right: 0.5rem !important;
+}
+
+.manager-account-sidebar .mb-2,
+.manager-account-sidebar .my-2 {
+	margin-bottom: 0.5rem !important;
+}
+
+.manager-account-sidebar .ml-2,
+.manager-account-sidebar .mx-2 {
+	margin-left: 0.5rem !important;
+}
+
+.manager-account-sidebar .m-3 {
+	margin: 1rem !important;
+}
+
+.manager-account-sidebar .mt-3,
+.manager-account-sidebar .my-3 {
+	margin-top: 1rem !important;
+}
+
+.manager-account-sidebar .mr-3,
+.manager-account-sidebar .mx-3 {
+	margin-right: 1rem !important;
+}
+
+.manager-account-sidebar .mb-3,
+.manager-account-sidebar .my-3 {
+	margin-bottom: 1rem !important;
+}
+
+.manager-account-sidebar .ml-3,
+.manager-account-sidebar .mx-3 {
+	margin-left: 1rem !important;
+}
+
+.manager-account-sidebar .m-4 {
+	margin: 1.5rem !important;
+}
+
+.manager-account-sidebar .mt-4,
+.manager-account-sidebar .my-4 {
+	margin-top: 1.5rem !important;
+}
+
+.manager-account-sidebar .mr-4,
+.manager-account-sidebar .mx-4 {
+	margin-right: 1.5rem !important;
+}
+
+.manager-account-sidebar .mb-4,
+.manager-account-sidebar .my-4 {
+	margin-bottom: 1.5rem !important;
+}
+
+.manager-account-sidebar .ml-4,
+.manager-account-sidebar .mx-4 {
+	margin-left: 1.5rem !important;
+}
+
+.manager-account-sidebar .m-5 {
+	margin: 3rem !important;
+}
+
+.manager-account-sidebar .mt-5,
+.manager-account-sidebar .my-5 {
+	margin-top: 3rem !important;
+}
+
+.manager-account-sidebar .mr-5,
+.manager-account-sidebar .mx-5 {
+	margin-right: 3rem !important;
+}
+
+.manager-account-sidebar .mb-5,
+.manager-account-sidebar .my-5 {
+	margin-bottom: 3rem !important;
+}
+
+.manager-account-sidebar .ml-5,
+.manager-account-sidebar .mx-5 {
+	margin-left: 3rem !important;
+}
+
+.manager-account-sidebar .p-0 {
+	padding: 0 !important;
+}
+
+.manager-account-sidebar .pt-0,
+.manager-account-sidebar .py-0 {
+	padding-top: 0 !important;
+}
+
+.manager-account-sidebar .pr-0,
+.manager-account-sidebar .px-0 {
+	padding-right: 0 !important;
+}
+
+.manager-account-sidebar .pb-0,
+.manager-account-sidebar .py-0 {
+	padding-bottom: 0 !important;
+}
+
+.manager-account-sidebar .pl-0,
+.manager-account-sidebar .px-0 {
+	padding-left: 0 !important;
+}
+
+.manager-account-sidebar .p-1 {
+	padding: 0.25rem !important;
+}
+
+.manager-account-sidebar .pt-1,
+.manager-account-sidebar .py-1 {
+	padding-top: 0.25rem !important;
+}
+
+.manager-account-sidebar .pr-1,
+.manager-account-sidebar .px-1 {
+	padding-right: 0.25rem !important;
+}
+
+.manager-account-sidebar .pb-1,
+.manager-account-sidebar .py-1 {
+	padding-bottom: 0.25rem !important;
+}
+
+.manager-account-sidebar .pl-1,
+.manager-account-sidebar .px-1 {
+	padding-left: 0.25rem !important;
+}
+
+.manager-account-sidebar .p-2 {
+	padding: 0.5rem !important;
+}
+
+.manager-account-sidebar .pt-2,
+.manager-account-sidebar .py-2 {
+	padding-top: 0.5rem !important;
+}
+
+.manager-account-sidebar .pr-2,
+.manager-account-sidebar .px-2 {
+	padding-right: 0.5rem !important;
+}
+
+.manager-account-sidebar .pb-2,
+.manager-account-sidebar .py-2 {
+	padding-bottom: 0.5rem !important;
+}
+
+.manager-account-sidebar .pl-2,
+.manager-account-sidebar .px-2 {
+	padding-left: 0.5rem !important;
+}
+
+.manager-account-sidebar .p-3 {
+	padding: 1rem !important;
+}
+
+.manager-account-sidebar .pt-3,
+.manager-account-sidebar .py-3 {
+	padding-top: 1rem !important;
+}
+
+.manager-account-sidebar .pr-3,
+.manager-account-sidebar .px-3 {
+	padding-right: 1rem !important;
+}
+
+.manager-account-sidebar .pb-3,
+.manager-account-sidebar .py-3 {
+	padding-bottom: 1rem !important;
+}
+
+.manager-account-sidebar .pl-3,
+.manager-account-sidebar .px-3 {
+	padding-left: 1rem !important;
+}
+
+.manager-account-sidebar .p-4 {
+	padding: 1.5rem !important;
+}
+
+.manager-account-sidebar .pt-4,
+.manager-account-sidebar .py-4 {
+	padding-top: 1.5rem !important;
+}
+
+.manager-account-sidebar .pr-4,
+.manager-account-sidebar .px-4 {
+	padding-right: 1.5rem !important;
+}
+
+.manager-account-sidebar .pb-4,
+.manager-account-sidebar .py-4 {
+	padding-bottom: 1.5rem !important;
+}
+
+.manager-account-sidebar .pl-4,
+.manager-account-sidebar .px-4 {
+	padding-left: 1.5rem !important;
+}
+
+.manager-account-sidebar .p-5 {
+	padding: 3rem !important;
+}
+
+.manager-account-sidebar .pt-5,
+.manager-account-sidebar .py-5 {
+	padding-top: 3rem !important;
+}
+
+.manager-account-sidebar .pr-5,
+.manager-account-sidebar .px-5 {
+	padding-right: 3rem !important;
+}
+
+.manager-account-sidebar .pb-5,
+.manager-account-sidebar .py-5 {
+	padding-bottom: 3rem !important;
+}
+
+.manager-account-sidebar .pl-5,
+.manager-account-sidebar .px-5 {
+	padding-left: 3rem !important;
+}
+
+.manager-account-sidebar .m-auto {
+	margin: auto !important;
+}
+
+.manager-account-sidebar .mt-auto,
+.manager-account-sidebar .my-auto {
+	margin-top: auto !important;
+}
+
+.manager-account-sidebar .mr-auto,
+.manager-account-sidebar .mx-auto {
+	margin-right: auto !important;
+}
+
+.manager-account-sidebar .mb-auto,
+.manager-account-sidebar .my-auto {
+	margin-bottom: auto !important;
+}
+
+.manager-account-sidebar .ml-auto,
+.manager-account-sidebar .mx-auto {
+	margin-left: auto !important;
+}
+
+@media (min-width: 576px) {
+	.manager-account-sidebar .m-sm-0 {
+		margin: 0 !important;
+	}
+
+	.manager-account-sidebar .mt-sm-0,
+	.manager-account-sidebar .my-sm-0 {
+		margin-top: 0 !important;
+	}
+
+	.manager-account-sidebar .mr-sm-0,
+	.manager-account-sidebar .mx-sm-0 {
+		margin-right: 0 !important;
+	}
+
+	.manager-account-sidebar .mb-sm-0,
+	.manager-account-sidebar .my-sm-0 {
+		margin-bottom: 0 !important;
+	}
+
+	.manager-account-sidebar .ml-sm-0,
+	.manager-account-sidebar .mx-sm-0 {
+		margin-left: 0 !important;
+	}
+
+	.manager-account-sidebar .m-sm-1 {
+		margin: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .mt-sm-1,
+	.manager-account-sidebar .my-sm-1 {
+		margin-top: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .mr-sm-1,
+	.manager-account-sidebar .mx-sm-1 {
+		margin-right: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .mb-sm-1,
+	.manager-account-sidebar .my-sm-1 {
+		margin-bottom: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .ml-sm-1,
+	.manager-account-sidebar .mx-sm-1 {
+		margin-left: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .m-sm-2 {
+		margin: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .mt-sm-2,
+	.manager-account-sidebar .my-sm-2 {
+		margin-top: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .mr-sm-2,
+	.manager-account-sidebar .mx-sm-2 {
+		margin-right: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .mb-sm-2,
+	.manager-account-sidebar .my-sm-2 {
+		margin-bottom: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .ml-sm-2,
+	.manager-account-sidebar .mx-sm-2 {
+		margin-left: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .m-sm-3 {
+		margin: 1rem !important;
+	}
+
+	.manager-account-sidebar .mt-sm-3,
+	.manager-account-sidebar .my-sm-3 {
+		margin-top: 1rem !important;
+	}
+
+	.manager-account-sidebar .mr-sm-3,
+	.manager-account-sidebar .mx-sm-3 {
+		margin-right: 1rem !important;
+	}
+
+	.manager-account-sidebar .mb-sm-3,
+	.manager-account-sidebar .my-sm-3 {
+		margin-bottom: 1rem !important;
+	}
+
+	.manager-account-sidebar .ml-sm-3,
+	.manager-account-sidebar .mx-sm-3 {
+		margin-left: 1rem !important;
+	}
+
+	.manager-account-sidebar .m-sm-4 {
+		margin: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .mt-sm-4,
+	.manager-account-sidebar .my-sm-4 {
+		margin-top: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .mr-sm-4,
+	.manager-account-sidebar .mx-sm-4 {
+		margin-right: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .mb-sm-4,
+	.manager-account-sidebar .my-sm-4 {
+		margin-bottom: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .ml-sm-4,
+	.manager-account-sidebar .mx-sm-4 {
+		margin-left: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .m-sm-5 {
+		margin: 3rem !important;
+	}
+
+	.manager-account-sidebar .mt-sm-5,
+	.manager-account-sidebar .my-sm-5 {
+		margin-top: 3rem !important;
+	}
+
+	.manager-account-sidebar .mr-sm-5,
+	.manager-account-sidebar .mx-sm-5 {
+		margin-right: 3rem !important;
+	}
+
+	.manager-account-sidebar .mb-sm-5,
+	.manager-account-sidebar .my-sm-5 {
+		margin-bottom: 3rem !important;
+	}
+
+	.manager-account-sidebar .ml-sm-5,
+	.manager-account-sidebar .mx-sm-5 {
+		margin-left: 3rem !important;
+	}
+
+	.manager-account-sidebar .p-sm-0 {
+		padding: 0 !important;
+	}
+
+	.manager-account-sidebar .pt-sm-0,
+	.manager-account-sidebar .py-sm-0 {
+		padding-top: 0 !important;
+	}
+
+	.manager-account-sidebar .pr-sm-0,
+	.manager-account-sidebar .px-sm-0 {
+		padding-right: 0 !important;
+	}
+
+	.manager-account-sidebar .pb-sm-0,
+	.manager-account-sidebar .py-sm-0 {
+		padding-bottom: 0 !important;
+	}
+
+	.manager-account-sidebar .pl-sm-0,
+	.manager-account-sidebar .px-sm-0 {
+		padding-left: 0 !important;
+	}
+
+	.manager-account-sidebar .p-sm-1 {
+		padding: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pt-sm-1,
+	.manager-account-sidebar .py-sm-1 {
+		padding-top: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pr-sm-1,
+	.manager-account-sidebar .px-sm-1 {
+		padding-right: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pb-sm-1,
+	.manager-account-sidebar .py-sm-1 {
+		padding-bottom: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pl-sm-1,
+	.manager-account-sidebar .px-sm-1 {
+		padding-left: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .p-sm-2 {
+		padding: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pt-sm-2,
+	.manager-account-sidebar .py-sm-2 {
+		padding-top: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pr-sm-2,
+	.manager-account-sidebar .px-sm-2 {
+		padding-right: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pb-sm-2,
+	.manager-account-sidebar .py-sm-2 {
+		padding-bottom: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pl-sm-2,
+	.manager-account-sidebar .px-sm-2 {
+		padding-left: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .p-sm-3 {
+		padding: 1rem !important;
+	}
+
+	.manager-account-sidebar .pt-sm-3,
+	.manager-account-sidebar .py-sm-3 {
+		padding-top: 1rem !important;
+	}
+
+	.manager-account-sidebar .pr-sm-3,
+	.manager-account-sidebar .px-sm-3 {
+		padding-right: 1rem !important;
+	}
+
+	.manager-account-sidebar .pb-sm-3,
+	.manager-account-sidebar .py-sm-3 {
+		padding-bottom: 1rem !important;
+	}
+
+	.manager-account-sidebar .pl-sm-3,
+	.manager-account-sidebar .px-sm-3 {
+		padding-left: 1rem !important;
+	}
+
+	.manager-account-sidebar .p-sm-4 {
+		padding: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pt-sm-4,
+	.manager-account-sidebar .py-sm-4 {
+		padding-top: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pr-sm-4,
+	.manager-account-sidebar .px-sm-4 {
+		padding-right: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pb-sm-4,
+	.manager-account-sidebar .py-sm-4 {
+		padding-bottom: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pl-sm-4,
+	.manager-account-sidebar .px-sm-4 {
+		padding-left: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .p-sm-5 {
+		padding: 3rem !important;
+	}
+
+	.manager-account-sidebar .pt-sm-5,
+	.manager-account-sidebar .py-sm-5 {
+		padding-top: 3rem !important;
+	}
+
+	.manager-account-sidebar .pr-sm-5,
+	.manager-account-sidebar .px-sm-5 {
+		padding-right: 3rem !important;
+	}
+
+	.manager-account-sidebar .pb-sm-5,
+	.manager-account-sidebar .py-sm-5 {
+		padding-bottom: 3rem !important;
+	}
+
+	.manager-account-sidebar .pl-sm-5,
+	.manager-account-sidebar .px-sm-5 {
+		padding-left: 3rem !important;
+	}
+
+	.manager-account-sidebar .m-sm-auto {
+		margin: auto !important;
+	}
+
+	.manager-account-sidebar .mt-sm-auto,
+	.manager-account-sidebar .my-sm-auto {
+		margin-top: auto !important;
+	}
+
+	.manager-account-sidebar .mr-sm-auto,
+	.manager-account-sidebar .mx-sm-auto {
+		margin-right: auto !important;
+	}
+
+	.manager-account-sidebar .mb-sm-auto,
+	.manager-account-sidebar .my-sm-auto {
+		margin-bottom: auto !important;
+	}
+
+	.manager-account-sidebar .ml-sm-auto,
+	.manager-account-sidebar .mx-sm-auto {
+		margin-left: auto !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.manager-account-sidebar .m-md-0 {
+		margin: 0 !important;
+	}
+
+	.manager-account-sidebar .mt-md-0,
+	.manager-account-sidebar .my-md-0 {
+		margin-top: 0 !important;
+	}
+
+	.manager-account-sidebar .mr-md-0,
+	.manager-account-sidebar .mx-md-0 {
+		margin-right: 0 !important;
+	}
+
+	.manager-account-sidebar .mb-md-0,
+	.manager-account-sidebar .my-md-0 {
+		margin-bottom: 0 !important;
+	}
+
+	.manager-account-sidebar .ml-md-0,
+	.manager-account-sidebar .mx-md-0 {
+		margin-left: 0 !important;
+	}
+
+	.manager-account-sidebar .m-md-1 {
+		margin: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .mt-md-1,
+	.manager-account-sidebar .my-md-1 {
+		margin-top: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .mr-md-1,
+	.manager-account-sidebar .mx-md-1 {
+		margin-right: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .mb-md-1,
+	.manager-account-sidebar .my-md-1 {
+		margin-bottom: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .ml-md-1,
+	.manager-account-sidebar .mx-md-1 {
+		margin-left: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .m-md-2 {
+		margin: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .mt-md-2,
+	.manager-account-sidebar .my-md-2 {
+		margin-top: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .mr-md-2,
+	.manager-account-sidebar .mx-md-2 {
+		margin-right: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .mb-md-2,
+	.manager-account-sidebar .my-md-2 {
+		margin-bottom: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .ml-md-2,
+	.manager-account-sidebar .mx-md-2 {
+		margin-left: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .m-md-3 {
+		margin: 1rem !important;
+	}
+
+	.manager-account-sidebar .mt-md-3,
+	.manager-account-sidebar .my-md-3 {
+		margin-top: 1rem !important;
+	}
+
+	.manager-account-sidebar .mr-md-3,
+	.manager-account-sidebar .mx-md-3 {
+		margin-right: 1rem !important;
+	}
+
+	.manager-account-sidebar .mb-md-3,
+	.manager-account-sidebar .my-md-3 {
+		margin-bottom: 1rem !important;
+	}
+
+	.manager-account-sidebar .ml-md-3,
+	.manager-account-sidebar .mx-md-3 {
+		margin-left: 1rem !important;
+	}
+
+	.manager-account-sidebar .m-md-4 {
+		margin: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .mt-md-4,
+	.manager-account-sidebar .my-md-4 {
+		margin-top: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .mr-md-4,
+	.manager-account-sidebar .mx-md-4 {
+		margin-right: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .mb-md-4,
+	.manager-account-sidebar .my-md-4 {
+		margin-bottom: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .ml-md-4,
+	.manager-account-sidebar .mx-md-4 {
+		margin-left: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .m-md-5 {
+		margin: 3rem !important;
+	}
+
+	.manager-account-sidebar .mt-md-5,
+	.manager-account-sidebar .my-md-5 {
+		margin-top: 3rem !important;
+	}
+
+	.manager-account-sidebar .mr-md-5,
+	.manager-account-sidebar .mx-md-5 {
+		margin-right: 3rem !important;
+	}
+
+	.manager-account-sidebar .mb-md-5,
+	.manager-account-sidebar .my-md-5 {
+		margin-bottom: 3rem !important;
+	}
+
+	.manager-account-sidebar .ml-md-5,
+	.manager-account-sidebar .mx-md-5 {
+		margin-left: 3rem !important;
+	}
+
+	.manager-account-sidebar .p-md-0 {
+		padding: 0 !important;
+	}
+
+	.manager-account-sidebar .pt-md-0,
+	.manager-account-sidebar .py-md-0 {
+		padding-top: 0 !important;
+	}
+
+	.manager-account-sidebar .pr-md-0,
+	.manager-account-sidebar .px-md-0 {
+		padding-right: 0 !important;
+	}
+
+	.manager-account-sidebar .pb-md-0,
+	.manager-account-sidebar .py-md-0 {
+		padding-bottom: 0 !important;
+	}
+
+	.manager-account-sidebar .pl-md-0,
+	.manager-account-sidebar .px-md-0 {
+		padding-left: 0 !important;
+	}
+
+	.manager-account-sidebar .p-md-1 {
+		padding: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pt-md-1,
+	.manager-account-sidebar .py-md-1 {
+		padding-top: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pr-md-1,
+	.manager-account-sidebar .px-md-1 {
+		padding-right: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pb-md-1,
+	.manager-account-sidebar .py-md-1 {
+		padding-bottom: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pl-md-1,
+	.manager-account-sidebar .px-md-1 {
+		padding-left: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .p-md-2 {
+		padding: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pt-md-2,
+	.manager-account-sidebar .py-md-2 {
+		padding-top: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pr-md-2,
+	.manager-account-sidebar .px-md-2 {
+		padding-right: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pb-md-2,
+	.manager-account-sidebar .py-md-2 {
+		padding-bottom: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pl-md-2,
+	.manager-account-sidebar .px-md-2 {
+		padding-left: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .p-md-3 {
+		padding: 1rem !important;
+	}
+
+	.manager-account-sidebar .pt-md-3,
+	.manager-account-sidebar .py-md-3 {
+		padding-top: 1rem !important;
+	}
+
+	.manager-account-sidebar .pr-md-3,
+	.manager-account-sidebar .px-md-3 {
+		padding-right: 1rem !important;
+	}
+
+	.manager-account-sidebar .pb-md-3,
+	.manager-account-sidebar .py-md-3 {
+		padding-bottom: 1rem !important;
+	}
+
+	.manager-account-sidebar .pl-md-3,
+	.manager-account-sidebar .px-md-3 {
+		padding-left: 1rem !important;
+	}
+
+	.manager-account-sidebar .p-md-4 {
+		padding: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pt-md-4,
+	.manager-account-sidebar .py-md-4 {
+		padding-top: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pr-md-4,
+	.manager-account-sidebar .px-md-4 {
+		padding-right: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pb-md-4,
+	.manager-account-sidebar .py-md-4 {
+		padding-bottom: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pl-md-4,
+	.manager-account-sidebar .px-md-4 {
+		padding-left: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .p-md-5 {
+		padding: 3rem !important;
+	}
+
+	.manager-account-sidebar .pt-md-5,
+	.manager-account-sidebar .py-md-5 {
+		padding-top: 3rem !important;
+	}
+
+	.manager-account-sidebar .pr-md-5,
+	.manager-account-sidebar .px-md-5 {
+		padding-right: 3rem !important;
+	}
+
+	.manager-account-sidebar .pb-md-5,
+	.manager-account-sidebar .py-md-5 {
+		padding-bottom: 3rem !important;
+	}
+
+	.manager-account-sidebar .pl-md-5,
+	.manager-account-sidebar .px-md-5 {
+		padding-left: 3rem !important;
+	}
+
+	.manager-account-sidebar .m-md-auto {
+		margin: auto !important;
+	}
+
+	.manager-account-sidebar .mt-md-auto,
+	.manager-account-sidebar .my-md-auto {
+		margin-top: auto !important;
+	}
+
+	.manager-account-sidebar .mr-md-auto,
+	.manager-account-sidebar .mx-md-auto {
+		margin-right: auto !important;
+	}
+
+	.manager-account-sidebar .mb-md-auto,
+	.manager-account-sidebar .my-md-auto {
+		margin-bottom: auto !important;
+	}
+
+	.manager-account-sidebar .ml-md-auto,
+	.manager-account-sidebar .mx-md-auto {
+		margin-left: auto !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.manager-account-sidebar .m-lg-0 {
+		margin: 0 !important;
+	}
+
+	.manager-account-sidebar .mt-lg-0,
+	.manager-account-sidebar .my-lg-0 {
+		margin-top: 0 !important;
+	}
+
+	.manager-account-sidebar .mr-lg-0,
+	.manager-account-sidebar .mx-lg-0 {
+		margin-right: 0 !important;
+	}
+
+	.manager-account-sidebar .mb-lg-0,
+	.manager-account-sidebar .my-lg-0 {
+		margin-bottom: 0 !important;
+	}
+
+	.manager-account-sidebar .ml-lg-0,
+	.manager-account-sidebar .mx-lg-0 {
+		margin-left: 0 !important;
+	}
+
+	.manager-account-sidebar .m-lg-1 {
+		margin: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .mt-lg-1,
+	.manager-account-sidebar .my-lg-1 {
+		margin-top: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .mr-lg-1,
+	.manager-account-sidebar .mx-lg-1 {
+		margin-right: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .mb-lg-1,
+	.manager-account-sidebar .my-lg-1 {
+		margin-bottom: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .ml-lg-1,
+	.manager-account-sidebar .mx-lg-1 {
+		margin-left: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .m-lg-2 {
+		margin: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .mt-lg-2,
+	.manager-account-sidebar .my-lg-2 {
+		margin-top: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .mr-lg-2,
+	.manager-account-sidebar .mx-lg-2 {
+		margin-right: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .mb-lg-2,
+	.manager-account-sidebar .my-lg-2 {
+		margin-bottom: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .ml-lg-2,
+	.manager-account-sidebar .mx-lg-2 {
+		margin-left: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .m-lg-3 {
+		margin: 1rem !important;
+	}
+
+	.manager-account-sidebar .mt-lg-3,
+	.manager-account-sidebar .my-lg-3 {
+		margin-top: 1rem !important;
+	}
+
+	.manager-account-sidebar .mr-lg-3,
+	.manager-account-sidebar .mx-lg-3 {
+		margin-right: 1rem !important;
+	}
+
+	.manager-account-sidebar .mb-lg-3,
+	.manager-account-sidebar .my-lg-3 {
+		margin-bottom: 1rem !important;
+	}
+
+	.manager-account-sidebar .ml-lg-3,
+	.manager-account-sidebar .mx-lg-3 {
+		margin-left: 1rem !important;
+	}
+
+	.manager-account-sidebar .m-lg-4 {
+		margin: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .mt-lg-4,
+	.manager-account-sidebar .my-lg-4 {
+		margin-top: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .mr-lg-4,
+	.manager-account-sidebar .mx-lg-4 {
+		margin-right: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .mb-lg-4,
+	.manager-account-sidebar .my-lg-4 {
+		margin-bottom: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .ml-lg-4,
+	.manager-account-sidebar .mx-lg-4 {
+		margin-left: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .m-lg-5 {
+		margin: 3rem !important;
+	}
+
+	.manager-account-sidebar .mt-lg-5,
+	.manager-account-sidebar .my-lg-5 {
+		margin-top: 3rem !important;
+	}
+
+	.manager-account-sidebar .mr-lg-5,
+	.manager-account-sidebar .mx-lg-5 {
+		margin-right: 3rem !important;
+	}
+
+	.manager-account-sidebar .mb-lg-5,
+	.manager-account-sidebar .my-lg-5 {
+		margin-bottom: 3rem !important;
+	}
+
+	.manager-account-sidebar .ml-lg-5,
+	.manager-account-sidebar .mx-lg-5 {
+		margin-left: 3rem !important;
+	}
+
+	.manager-account-sidebar .p-lg-0 {
+		padding: 0 !important;
+	}
+
+	.manager-account-sidebar .pt-lg-0,
+	.manager-account-sidebar .py-lg-0 {
+		padding-top: 0 !important;
+	}
+
+	.manager-account-sidebar .pr-lg-0,
+	.manager-account-sidebar .px-lg-0 {
+		padding-right: 0 !important;
+	}
+
+	.manager-account-sidebar .pb-lg-0,
+	.manager-account-sidebar .py-lg-0 {
+		padding-bottom: 0 !important;
+	}
+
+	.manager-account-sidebar .pl-lg-0,
+	.manager-account-sidebar .px-lg-0 {
+		padding-left: 0 !important;
+	}
+
+	.manager-account-sidebar .p-lg-1 {
+		padding: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pt-lg-1,
+	.manager-account-sidebar .py-lg-1 {
+		padding-top: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pr-lg-1,
+	.manager-account-sidebar .px-lg-1 {
+		padding-right: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pb-lg-1,
+	.manager-account-sidebar .py-lg-1 {
+		padding-bottom: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pl-lg-1,
+	.manager-account-sidebar .px-lg-1 {
+		padding-left: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .p-lg-2 {
+		padding: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pt-lg-2,
+	.manager-account-sidebar .py-lg-2 {
+		padding-top: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pr-lg-2,
+	.manager-account-sidebar .px-lg-2 {
+		padding-right: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pb-lg-2,
+	.manager-account-sidebar .py-lg-2 {
+		padding-bottom: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pl-lg-2,
+	.manager-account-sidebar .px-lg-2 {
+		padding-left: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .p-lg-3 {
+		padding: 1rem !important;
+	}
+
+	.manager-account-sidebar .pt-lg-3,
+	.manager-account-sidebar .py-lg-3 {
+		padding-top: 1rem !important;
+	}
+
+	.manager-account-sidebar .pr-lg-3,
+	.manager-account-sidebar .px-lg-3 {
+		padding-right: 1rem !important;
+	}
+
+	.manager-account-sidebar .pb-lg-3,
+	.manager-account-sidebar .py-lg-3 {
+		padding-bottom: 1rem !important;
+	}
+
+	.manager-account-sidebar .pl-lg-3,
+	.manager-account-sidebar .px-lg-3 {
+		padding-left: 1rem !important;
+	}
+
+	.manager-account-sidebar .p-lg-4 {
+		padding: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pt-lg-4,
+	.manager-account-sidebar .py-lg-4 {
+		padding-top: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pr-lg-4,
+	.manager-account-sidebar .px-lg-4 {
+		padding-right: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pb-lg-4,
+	.manager-account-sidebar .py-lg-4 {
+		padding-bottom: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pl-lg-4,
+	.manager-account-sidebar .px-lg-4 {
+		padding-left: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .p-lg-5 {
+		padding: 3rem !important;
+	}
+
+	.manager-account-sidebar .pt-lg-5,
+	.manager-account-sidebar .py-lg-5 {
+		padding-top: 3rem !important;
+	}
+
+	.manager-account-sidebar .pr-lg-5,
+	.manager-account-sidebar .px-lg-5 {
+		padding-right: 3rem !important;
+	}
+
+	.manager-account-sidebar .pb-lg-5,
+	.manager-account-sidebar .py-lg-5 {
+		padding-bottom: 3rem !important;
+	}
+
+	.manager-account-sidebar .pl-lg-5,
+	.manager-account-sidebar .px-lg-5 {
+		padding-left: 3rem !important;
+	}
+
+	.manager-account-sidebar .m-lg-auto {
+		margin: auto !important;
+	}
+
+	.manager-account-sidebar .mt-lg-auto,
+	.manager-account-sidebar .my-lg-auto {
+		margin-top: auto !important;
+	}
+
+	.manager-account-sidebar .mr-lg-auto,
+	.manager-account-sidebar .mx-lg-auto {
+		margin-right: auto !important;
+	}
+
+	.manager-account-sidebar .mb-lg-auto,
+	.manager-account-sidebar .my-lg-auto {
+		margin-bottom: auto !important;
+	}
+
+	.manager-account-sidebar .ml-lg-auto,
+	.manager-account-sidebar .mx-lg-auto {
+		margin-left: auto !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.manager-account-sidebar .m-xl-0 {
+		margin: 0 !important;
+	}
+
+	.manager-account-sidebar .mt-xl-0,
+	.manager-account-sidebar .my-xl-0 {
+		margin-top: 0 !important;
+	}
+
+	.manager-account-sidebar .mr-xl-0,
+	.manager-account-sidebar .mx-xl-0 {
+		margin-right: 0 !important;
+	}
+
+	.manager-account-sidebar .mb-xl-0,
+	.manager-account-sidebar .my-xl-0 {
+		margin-bottom: 0 !important;
+	}
+
+	.manager-account-sidebar .ml-xl-0,
+	.manager-account-sidebar .mx-xl-0 {
+		margin-left: 0 !important;
+	}
+
+	.manager-account-sidebar .m-xl-1 {
+		margin: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .mt-xl-1,
+	.manager-account-sidebar .my-xl-1 {
+		margin-top: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .mr-xl-1,
+	.manager-account-sidebar .mx-xl-1 {
+		margin-right: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .mb-xl-1,
+	.manager-account-sidebar .my-xl-1 {
+		margin-bottom: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .ml-xl-1,
+	.manager-account-sidebar .mx-xl-1 {
+		margin-left: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .m-xl-2 {
+		margin: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .mt-xl-2,
+	.manager-account-sidebar .my-xl-2 {
+		margin-top: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .mr-xl-2,
+	.manager-account-sidebar .mx-xl-2 {
+		margin-right: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .mb-xl-2,
+	.manager-account-sidebar .my-xl-2 {
+		margin-bottom: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .ml-xl-2,
+	.manager-account-sidebar .mx-xl-2 {
+		margin-left: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .m-xl-3 {
+		margin: 1rem !important;
+	}
+
+	.manager-account-sidebar .mt-xl-3,
+	.manager-account-sidebar .my-xl-3 {
+		margin-top: 1rem !important;
+	}
+
+	.manager-account-sidebar .mr-xl-3,
+	.manager-account-sidebar .mx-xl-3 {
+		margin-right: 1rem !important;
+	}
+
+	.manager-account-sidebar .mb-xl-3,
+	.manager-account-sidebar .my-xl-3 {
+		margin-bottom: 1rem !important;
+	}
+
+	.manager-account-sidebar .ml-xl-3,
+	.manager-account-sidebar .mx-xl-3 {
+		margin-left: 1rem !important;
+	}
+
+	.manager-account-sidebar .m-xl-4 {
+		margin: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .mt-xl-4,
+	.manager-account-sidebar .my-xl-4 {
+		margin-top: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .mr-xl-4,
+	.manager-account-sidebar .mx-xl-4 {
+		margin-right: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .mb-xl-4,
+	.manager-account-sidebar .my-xl-4 {
+		margin-bottom: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .ml-xl-4,
+	.manager-account-sidebar .mx-xl-4 {
+		margin-left: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .m-xl-5 {
+		margin: 3rem !important;
+	}
+
+	.manager-account-sidebar .mt-xl-5,
+	.manager-account-sidebar .my-xl-5 {
+		margin-top: 3rem !important;
+	}
+
+	.manager-account-sidebar .mr-xl-5,
+	.manager-account-sidebar .mx-xl-5 {
+		margin-right: 3rem !important;
+	}
+
+	.manager-account-sidebar .mb-xl-5,
+	.manager-account-sidebar .my-xl-5 {
+		margin-bottom: 3rem !important;
+	}
+
+	.manager-account-sidebar .ml-xl-5,
+	.manager-account-sidebar .mx-xl-5 {
+		margin-left: 3rem !important;
+	}
+
+	.manager-account-sidebar .p-xl-0 {
+		padding: 0 !important;
+	}
+
+	.manager-account-sidebar .pt-xl-0,
+	.manager-account-sidebar .py-xl-0 {
+		padding-top: 0 !important;
+	}
+
+	.manager-account-sidebar .pr-xl-0,
+	.manager-account-sidebar .px-xl-0 {
+		padding-right: 0 !important;
+	}
+
+	.manager-account-sidebar .pb-xl-0,
+	.manager-account-sidebar .py-xl-0 {
+		padding-bottom: 0 !important;
+	}
+
+	.manager-account-sidebar .pl-xl-0,
+	.manager-account-sidebar .px-xl-0 {
+		padding-left: 0 !important;
+	}
+
+	.manager-account-sidebar .p-xl-1 {
+		padding: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pt-xl-1,
+	.manager-account-sidebar .py-xl-1 {
+		padding-top: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pr-xl-1,
+	.manager-account-sidebar .px-xl-1 {
+		padding-right: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pb-xl-1,
+	.manager-account-sidebar .py-xl-1 {
+		padding-bottom: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .pl-xl-1,
+	.manager-account-sidebar .px-xl-1 {
+		padding-left: 0.25rem !important;
+	}
+
+	.manager-account-sidebar .p-xl-2 {
+		padding: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pt-xl-2,
+	.manager-account-sidebar .py-xl-2 {
+		padding-top: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pr-xl-2,
+	.manager-account-sidebar .px-xl-2 {
+		padding-right: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pb-xl-2,
+	.manager-account-sidebar .py-xl-2 {
+		padding-bottom: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .pl-xl-2,
+	.manager-account-sidebar .px-xl-2 {
+		padding-left: 0.5rem !important;
+	}
+
+	.manager-account-sidebar .p-xl-3 {
+		padding: 1rem !important;
+	}
+
+	.manager-account-sidebar .pt-xl-3,
+	.manager-account-sidebar .py-xl-3 {
+		padding-top: 1rem !important;
+	}
+
+	.manager-account-sidebar .pr-xl-3,
+	.manager-account-sidebar .px-xl-3 {
+		padding-right: 1rem !important;
+	}
+
+	.manager-account-sidebar .pb-xl-3,
+	.manager-account-sidebar .py-xl-3 {
+		padding-bottom: 1rem !important;
+	}
+
+	.manager-account-sidebar .pl-xl-3,
+	.manager-account-sidebar .px-xl-3 {
+		padding-left: 1rem !important;
+	}
+
+	.manager-account-sidebar .p-xl-4 {
+		padding: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pt-xl-4,
+	.manager-account-sidebar .py-xl-4 {
+		padding-top: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pr-xl-4,
+	.manager-account-sidebar .px-xl-4 {
+		padding-right: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pb-xl-4,
+	.manager-account-sidebar .py-xl-4 {
+		padding-bottom: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .pl-xl-4,
+	.manager-account-sidebar .px-xl-4 {
+		padding-left: 1.5rem !important;
+	}
+
+	.manager-account-sidebar .p-xl-5 {
+		padding: 3rem !important;
+	}
+
+	.manager-account-sidebar .pt-xl-5,
+	.manager-account-sidebar .py-xl-5 {
+		padding-top: 3rem !important;
+	}
+
+	.manager-account-sidebar .pr-xl-5,
+	.manager-account-sidebar .px-xl-5 {
+		padding-right: 3rem !important;
+	}
+
+	.manager-account-sidebar .pb-xl-5,
+	.manager-account-sidebar .py-xl-5 {
+		padding-bottom: 3rem !important;
+	}
+
+	.manager-account-sidebar .pl-xl-5,
+	.manager-account-sidebar .px-xl-5 {
+		padding-left: 3rem !important;
+	}
+
+	.manager-account-sidebar .m-xl-auto {
+		margin: auto !important;
+	}
+
+	.manager-account-sidebar .mt-xl-auto,
+	.manager-account-sidebar .my-xl-auto {
+		margin-top: auto !important;
+	}
+
+	.manager-account-sidebar .mr-xl-auto,
+	.manager-account-sidebar .mx-xl-auto {
+		margin-right: auto !important;
+	}
+
+	.manager-account-sidebar .mb-xl-auto,
+	.manager-account-sidebar .my-xl-auto {
+		margin-bottom: auto !important;
+	}
+
+	.manager-account-sidebar .ml-xl-auto,
+	.manager-account-sidebar .mx-xl-auto {
+		margin-left: auto !important;
+	}
+}
+
+.manager-account-sidebar .text-justify {
+	text-align: justify !important;
+}
+
+.manager-account-sidebar .text-nowrap {
+	white-space: nowrap !important;
+}
+
+.manager-account-sidebar .text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.manager-account-sidebar .text-left {
+	text-align: left !important;
+}
+
+.manager-account-sidebar .text-right {
+	text-align: right !important;
+}
+
+.manager-account-sidebar .text-center {
+	text-align: center !important;
+}
+
+@media (min-width: 576px) {
+	.manager-account-sidebar .text-sm-left {
+		text-align: left !important;
+	}
+
+	.manager-account-sidebar .text-sm-right {
+		text-align: right !important;
+	}
+
+	.manager-account-sidebar .text-sm-center {
+		text-align: center !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.manager-account-sidebar .text-md-left {
+		text-align: left !important;
+	}
+
+	.manager-account-sidebar .text-md-right {
+		text-align: right !important;
+	}
+
+	.manager-account-sidebar .text-md-center {
+		text-align: center !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.manager-account-sidebar .text-lg-left {
+		text-align: left !important;
+	}
+
+	.manager-account-sidebar .text-lg-right {
+		text-align: right !important;
+	}
+
+	.manager-account-sidebar .text-lg-center {
+		text-align: center !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.manager-account-sidebar .text-xl-left {
+		text-align: left !important;
+	}
+
+	.manager-account-sidebar .text-xl-right {
+		text-align: right !important;
+	}
+
+	.manager-account-sidebar .text-xl-center {
+		text-align: center !important;
+	}
+}
+
+.manager-account-sidebar .text-lowercase {
+	text-transform: lowercase !important;
+}
+
+.manager-account-sidebar .text-uppercase {
+	text-transform: uppercase !important;
+}
+
+.manager-account-sidebar .text-capitalize {
+	text-transform: capitalize !important;
+}
+
+.manager-account-sidebar .font-weight-light {
+	font-weight: 300 !important;
+}
+
+.manager-account-sidebar .font-weight-normal {
+	font-weight: 400 !important;
+}
+
+.manager-account-sidebar .font-weight-bold {
+	font-weight: 700 !important;
+}
+
+.manager-account-sidebar .font-italic {
+	font-style: italic !important;
+}
+
+.manager-account-sidebar .text-white {
+	color: #fff !important;
+}
+
+.manager-account-sidebar .text-primary {
+	color: #007bff !important;
+}
+
+.manager-account-sidebar a.text-primary:hover,
+.manager-account-sidebar a.text-primary:focus {
+	color: #0062cc !important;
+}
+
+.manager-account-sidebar .text-secondary {
+	color: #6c757d !important;
+}
+
+.manager-account-sidebar a.text-secondary:hover,
+.manager-account-sidebar a.text-secondary:focus {
+	color: #545b62 !important;
+}
+
+.manager-account-sidebar .text-success {
+	color: #28a745 !important;
+}
+
+.manager-account-sidebar a.text-success:hover,
+.manager-account-sidebar a.text-success:focus {
+	color: #1e7e34 !important;
+}
+
+.manager-account-sidebar .text-info {
+	color: #17a2b8 !important;
+}
+
+.manager-account-sidebar a.text-info:hover,
+.manager-account-sidebar a.text-info:focus {
+	color: #117a8b !important;
+}
+
+.manager-account-sidebar .text-warning {
+	color: #ffc107 !important;
+}
+
+.manager-account-sidebar a.text-warning:hover,
+.manager-account-sidebar a.text-warning:focus {
+	color: #d39e00 !important;
+}
+
+.manager-account-sidebar .text-danger {
+	color: #dc3545 !important;
+}
+
+.manager-account-sidebar a.text-danger:hover,
+.manager-account-sidebar a.text-danger:focus {
+	color: #bd2130 !important;
+}
+
+.manager-account-sidebar .text-light {
+	color: #f8f9fa !important;
+}
+
+.manager-account-sidebar a.text-light:hover,
+.manager-account-sidebar a.text-light:focus {
+	color: #dae0e5 !important;
+}
+
+.manager-account-sidebar .text-dark {
+	color: #343a40 !important;
+}
+
+.manager-account-sidebar a.text-dark:hover,
+.manager-account-sidebar a.text-dark:focus {
+	color: #1d2124 !important;
+}
+
+.manager-account-sidebar .text-muted {
+	color: #6c757d !important;
+}
+
+.manager-account-sidebar .text-hide {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+.manager-account-sidebar .visible {
+	visibility: visible !important;
+}
+
+.manager-account-sidebar .invisible {
+	visibility: hidden !important;
+}
+
+.manager-account-sidebar .container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width: 576px) {
+	.manager-account-sidebar .container {
+		max-width: 540px;
+	}
+}
+
+@media (min-width: 768px) {
+	.manager-account-sidebar .container {
+		max-width: 720px;
+	}
+}
+
+@media (min-width: 992px) {
+	.manager-account-sidebar .container {
+		max-width: 960px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.manager-account-sidebar .container {
+		max-width: 1140px;
+	}
+}
+
+.manager-account-sidebar .container-fluid {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.manager-account-sidebar .row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.manager-account-sidebar .no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.manager-account-sidebar .no-gutters > .col,
+.manager-account-sidebar .no-gutters > [class*='col-'] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.manager-account-sidebar .col-xl,
+.manager-account-sidebar .col-xl-auto,
+.manager-account-sidebar .col-xl-12,
+.manager-account-sidebar .col-xl-11,
+.manager-account-sidebar .col-xl-10,
+.manager-account-sidebar .col-xl-9,
+.manager-account-sidebar .col-xl-8,
+.manager-account-sidebar .col-xl-7,
+.manager-account-sidebar .col-xl-6,
+.manager-account-sidebar .col-xl-5,
+.manager-account-sidebar .col-xl-4,
+.manager-account-sidebar .col-xl-3,
+.manager-account-sidebar .col-xl-2,
+.manager-account-sidebar .col-xl-1,
+.manager-account-sidebar .col-lg,
+.manager-account-sidebar .col-lg-auto,
+.manager-account-sidebar .col-lg-12,
+.manager-account-sidebar .col-lg-11,
+.manager-account-sidebar .col-lg-10,
+.manager-account-sidebar .col-lg-9,
+.manager-account-sidebar .col-lg-8,
+.manager-account-sidebar .col-lg-7,
+.manager-account-sidebar .col-lg-6,
+.manager-account-sidebar .col-lg-5,
+.manager-account-sidebar .col-lg-4,
+.manager-account-sidebar .col-lg-3,
+.manager-account-sidebar .col-lg-2,
+.manager-account-sidebar .col-lg-1,
+.manager-account-sidebar .col-md,
+.manager-account-sidebar .col-md-auto,
+.manager-account-sidebar .col-md-12,
+.manager-account-sidebar .col-md-11,
+.manager-account-sidebar .col-md-10,
+.manager-account-sidebar .col-md-9,
+.manager-account-sidebar .col-md-8,
+.manager-account-sidebar .col-md-7,
+.manager-account-sidebar .col-md-6,
+.manager-account-sidebar .col-md-5,
+.manager-account-sidebar .col-md-4,
+.manager-account-sidebar .col-md-3,
+.manager-account-sidebar .col-md-2,
+.manager-account-sidebar .col-md-1,
+.manager-account-sidebar .col-sm,
+.manager-account-sidebar .col-sm-auto,
+.manager-account-sidebar .col-sm-12,
+.manager-account-sidebar .col-sm-11,
+.manager-account-sidebar .col-sm-10,
+.manager-account-sidebar .col-sm-9,
+.manager-account-sidebar .col-sm-8,
+.manager-account-sidebar .col-sm-7,
+.manager-account-sidebar .col-sm-6,
+.manager-account-sidebar .col-sm-5,
+.manager-account-sidebar .col-sm-4,
+.manager-account-sidebar .col-sm-3,
+.manager-account-sidebar .col-sm-2,
+.manager-account-sidebar .col-sm-1,
+.manager-account-sidebar .col,
+.manager-account-sidebar .col-auto,
+.manager-account-sidebar .col-12,
+.manager-account-sidebar .col-11,
+.manager-account-sidebar .col-10,
+.manager-account-sidebar .col-9,
+.manager-account-sidebar .col-8,
+.manager-account-sidebar .col-7,
+.manager-account-sidebar .col-6,
+.manager-account-sidebar .col-5,
+.manager-account-sidebar .col-4,
+.manager-account-sidebar .col-3,
+.manager-account-sidebar .col-2,
+.manager-account-sidebar .col-1 {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.manager-account-sidebar .col {
+	flex-basis: 0;
+	flex-grow: 1;
+	max-width: 100%;
+}
+
+.manager-account-sidebar .col-auto {
+	flex: 0 0 auto;
+	width: auto;
+	max-width: none;
+}
+
+.manager-account-sidebar .col-1 {
+	flex: 0 0 8.3333333333%;
+	max-width: 8.3333333333%;
+}
+
+.manager-account-sidebar .col-2 {
+	flex: 0 0 16.6666666667%;
+	max-width: 16.6666666667%;
+}
+
+.manager-account-sidebar .col-3 {
+	flex: 0 0 25%;
+	max-width: 25%;
+}
+
+.manager-account-sidebar .col-4 {
+	flex: 0 0 33.3333333333%;
+	max-width: 33.3333333333%;
+}
+
+.manager-account-sidebar .col-5 {
+	flex: 0 0 41.6666666667%;
+	max-width: 41.6666666667%;
+}
+
+.manager-account-sidebar .col-6 {
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+
+.manager-account-sidebar .col-7 {
+	flex: 0 0 58.3333333333%;
+	max-width: 58.3333333333%;
+}
+
+.manager-account-sidebar .col-8 {
+	flex: 0 0 66.6666666667%;
+	max-width: 66.6666666667%;
+}
+
+.manager-account-sidebar .col-9 {
+	flex: 0 0 75%;
+	max-width: 75%;
+}
+
+.manager-account-sidebar .col-10 {
+	flex: 0 0 83.3333333333%;
+	max-width: 83.3333333333%;
+}
+
+.manager-account-sidebar .col-11 {
+	flex: 0 0 91.6666666667%;
+	max-width: 91.6666666667%;
+}
+
+.manager-account-sidebar .col-12 {
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
+.manager-account-sidebar .order-first {
+	order: -1;
+}
+
+.manager-account-sidebar .order-last {
+	order: 13;
+}
+
+.manager-account-sidebar .order-0 {
+	order: 0;
+}
+
+.manager-account-sidebar .order-1 {
+	order: 1;
+}
+
+.manager-account-sidebar .order-2 {
+	order: 2;
+}
+
+.manager-account-sidebar .order-3 {
+	order: 3;
+}
+
+.manager-account-sidebar .order-4 {
+	order: 4;
+}
+
+.manager-account-sidebar .order-5 {
+	order: 5;
+}
+
+.manager-account-sidebar .order-6 {
+	order: 6;
+}
+
+.manager-account-sidebar .order-7 {
+	order: 7;
+}
+
+.manager-account-sidebar .order-8 {
+	order: 8;
+}
+
+.manager-account-sidebar .order-9 {
+	order: 9;
+}
+
+.manager-account-sidebar .order-10 {
+	order: 10;
+}
+
+.manager-account-sidebar .order-11 {
+	order: 11;
+}
+
+.manager-account-sidebar .order-12 {
+	order: 12;
+}
+
+.manager-account-sidebar .offset-1 {
+	margin-left: 8.3333333333%;
+}
+
+.manager-account-sidebar .offset-2 {
+	margin-left: 16.6666666667%;
+}
+
+.manager-account-sidebar .offset-3 {
+	margin-left: 25%;
+}
+
+.manager-account-sidebar .offset-4 {
+	margin-left: 33.3333333333%;
+}
+
+.manager-account-sidebar .offset-5 {
+	margin-left: 41.6666666667%;
+}
+
+.manager-account-sidebar .offset-6 {
+	margin-left: 50%;
+}
+
+.manager-account-sidebar .offset-7 {
+	margin-left: 58.3333333333%;
+}
+
+.manager-account-sidebar .offset-8 {
+	margin-left: 66.6666666667%;
+}
+
+.manager-account-sidebar .offset-9 {
+	margin-left: 75%;
+}
+
+.manager-account-sidebar .offset-10 {
+	margin-left: 83.3333333333%;
+}
+
+.manager-account-sidebar .offset-11 {
+	margin-left: 91.6666666667%;
+}
+
+@media (min-width: 576px) {
+	.manager-account-sidebar .col-sm {
+		flex-basis: 0;
+		flex-grow: 1;
+		max-width: 100%;
+	}
+
+	.manager-account-sidebar .col-sm-auto {
+		flex: 0 0 auto;
+		width: auto;
+		max-width: none;
+	}
+
+	.manager-account-sidebar .col-sm-1 {
+		flex: 0 0 8.3333333333%;
+		max-width: 8.3333333333%;
+	}
+
+	.manager-account-sidebar .col-sm-2 {
+		flex: 0 0 16.6666666667%;
+		max-width: 16.6666666667%;
+	}
+
+	.manager-account-sidebar .col-sm-3 {
+		flex: 0 0 25%;
+		max-width: 25%;
+	}
+
+	.manager-account-sidebar .col-sm-4 {
+		flex: 0 0 33.3333333333%;
+		max-width: 33.3333333333%;
+	}
+
+	.manager-account-sidebar .col-sm-5 {
+		flex: 0 0 41.6666666667%;
+		max-width: 41.6666666667%;
+	}
+
+	.manager-account-sidebar .col-sm-6 {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	.manager-account-sidebar .col-sm-7 {
+		flex: 0 0 58.3333333333%;
+		max-width: 58.3333333333%;
+	}
+
+	.manager-account-sidebar .col-sm-8 {
+		flex: 0 0 66.6666666667%;
+		max-width: 66.6666666667%;
+	}
+
+	.manager-account-sidebar .col-sm-9 {
+		flex: 0 0 75%;
+		max-width: 75%;
+	}
+
+	.manager-account-sidebar .col-sm-10 {
+		flex: 0 0 83.3333333333%;
+		max-width: 83.3333333333%;
+	}
+
+	.manager-account-sidebar .col-sm-11 {
+		flex: 0 0 91.6666666667%;
+		max-width: 91.6666666667%;
+	}
+
+	.manager-account-sidebar .col-sm-12 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.manager-account-sidebar .order-sm-first {
+		order: -1;
+	}
+
+	.manager-account-sidebar .order-sm-last {
+		order: 13;
+	}
+
+	.manager-account-sidebar .order-sm-0 {
+		order: 0;
+	}
+
+	.manager-account-sidebar .order-sm-1 {
+		order: 1;
+	}
+
+	.manager-account-sidebar .order-sm-2 {
+		order: 2;
+	}
+
+	.manager-account-sidebar .order-sm-3 {
+		order: 3;
+	}
+
+	.manager-account-sidebar .order-sm-4 {
+		order: 4;
+	}
+
+	.manager-account-sidebar .order-sm-5 {
+		order: 5;
+	}
+
+	.manager-account-sidebar .order-sm-6 {
+		order: 6;
+	}
+
+	.manager-account-sidebar .order-sm-7 {
+		order: 7;
+	}
+
+	.manager-account-sidebar .order-sm-8 {
+		order: 8;
+	}
+
+	.manager-account-sidebar .order-sm-9 {
+		order: 9;
+	}
+
+	.manager-account-sidebar .order-sm-10 {
+		order: 10;
+	}
+
+	.manager-account-sidebar .order-sm-11 {
+		order: 11;
+	}
+
+	.manager-account-sidebar .order-sm-12 {
+		order: 12;
+	}
+
+	.manager-account-sidebar .offset-sm-0 {
+		margin-left: 0;
+	}
+
+	.manager-account-sidebar .offset-sm-1 {
+		margin-left: 8.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-sm-2 {
+		margin-left: 16.6666666667%;
+	}
+
+	.manager-account-sidebar .offset-sm-3 {
+		margin-left: 25%;
+	}
+
+	.manager-account-sidebar .offset-sm-4 {
+		margin-left: 33.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-sm-5 {
+		margin-left: 41.6666666667%;
+	}
+
+	.manager-account-sidebar .offset-sm-6 {
+		margin-left: 50%;
+	}
+
+	.manager-account-sidebar .offset-sm-7 {
+		margin-left: 58.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-sm-8 {
+		margin-left: 66.6666666667%;
+	}
+
+	.manager-account-sidebar .offset-sm-9 {
+		margin-left: 75%;
+	}
+
+	.manager-account-sidebar .offset-sm-10 {
+		margin-left: 83.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-sm-11 {
+		margin-left: 91.6666666667%;
+	}
+}
+
+@media (min-width: 768px) {
+	.manager-account-sidebar .col-md {
+		flex-basis: 0;
+		flex-grow: 1;
+		max-width: 100%;
+	}
+
+	.manager-account-sidebar .col-md-auto {
+		flex: 0 0 auto;
+		width: auto;
+		max-width: none;
+	}
+
+	.manager-account-sidebar .col-md-1 {
+		flex: 0 0 8.3333333333%;
+		max-width: 8.3333333333%;
+	}
+
+	.manager-account-sidebar .col-md-2 {
+		flex: 0 0 16.6666666667%;
+		max-width: 16.6666666667%;
+	}
+
+	.manager-account-sidebar .col-md-3 {
+		flex: 0 0 25%;
+		max-width: 25%;
+	}
+
+	.manager-account-sidebar .col-md-4 {
+		flex: 0 0 33.3333333333%;
+		max-width: 33.3333333333%;
+	}
+
+	.manager-account-sidebar .col-md-5 {
+		flex: 0 0 41.6666666667%;
+		max-width: 41.6666666667%;
+	}
+
+	.manager-account-sidebar .col-md-6 {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	.manager-account-sidebar .col-md-7 {
+		flex: 0 0 58.3333333333%;
+		max-width: 58.3333333333%;
+	}
+
+	.manager-account-sidebar .col-md-8 {
+		flex: 0 0 66.6666666667%;
+		max-width: 66.6666666667%;
+	}
+
+	.manager-account-sidebar .col-md-9 {
+		flex: 0 0 75%;
+		max-width: 75%;
+	}
+
+	.manager-account-sidebar .col-md-10 {
+		flex: 0 0 83.3333333333%;
+		max-width: 83.3333333333%;
+	}
+
+	.manager-account-sidebar .col-md-11 {
+		flex: 0 0 91.6666666667%;
+		max-width: 91.6666666667%;
+	}
+
+	.manager-account-sidebar .col-md-12 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.manager-account-sidebar .order-md-first {
+		order: -1;
+	}
+
+	.manager-account-sidebar .order-md-last {
+		order: 13;
+	}
+
+	.manager-account-sidebar .order-md-0 {
+		order: 0;
+	}
+
+	.manager-account-sidebar .order-md-1 {
+		order: 1;
+	}
+
+	.manager-account-sidebar .order-md-2 {
+		order: 2;
+	}
+
+	.manager-account-sidebar .order-md-3 {
+		order: 3;
+	}
+
+	.manager-account-sidebar .order-md-4 {
+		order: 4;
+	}
+
+	.manager-account-sidebar .order-md-5 {
+		order: 5;
+	}
+
+	.manager-account-sidebar .order-md-6 {
+		order: 6;
+	}
+
+	.manager-account-sidebar .order-md-7 {
+		order: 7;
+	}
+
+	.manager-account-sidebar .order-md-8 {
+		order: 8;
+	}
+
+	.manager-account-sidebar .order-md-9 {
+		order: 9;
+	}
+
+	.manager-account-sidebar .order-md-10 {
+		order: 10;
+	}
+
+	.manager-account-sidebar .order-md-11 {
+		order: 11;
+	}
+
+	.manager-account-sidebar .order-md-12 {
+		order: 12;
+	}
+
+	.manager-account-sidebar .offset-md-0 {
+		margin-left: 0;
+	}
+
+	.manager-account-sidebar .offset-md-1 {
+		margin-left: 8.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-md-2 {
+		margin-left: 16.6666666667%;
+	}
+
+	.manager-account-sidebar .offset-md-3 {
+		margin-left: 25%;
+	}
+
+	.manager-account-sidebar .offset-md-4 {
+		margin-left: 33.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-md-5 {
+		margin-left: 41.6666666667%;
+	}
+
+	.manager-account-sidebar .offset-md-6 {
+		margin-left: 50%;
+	}
+
+	.manager-account-sidebar .offset-md-7 {
+		margin-left: 58.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-md-8 {
+		margin-left: 66.6666666667%;
+	}
+
+	.manager-account-sidebar .offset-md-9 {
+		margin-left: 75%;
+	}
+
+	.manager-account-sidebar .offset-md-10 {
+		margin-left: 83.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-md-11 {
+		margin-left: 91.6666666667%;
+	}
+}
+
+@media (min-width: 992px) {
+	.manager-account-sidebar .col-lg {
+		flex-basis: 0;
+		flex-grow: 1;
+		max-width: 100%;
+	}
+
+	.manager-account-sidebar .col-lg-auto {
+		flex: 0 0 auto;
+		width: auto;
+		max-width: none;
+	}
+
+	.manager-account-sidebar .col-lg-1 {
+		flex: 0 0 8.3333333333%;
+		max-width: 8.3333333333%;
+	}
+
+	.manager-account-sidebar .col-lg-2 {
+		flex: 0 0 16.6666666667%;
+		max-width: 16.6666666667%;
+	}
+
+	.manager-account-sidebar .col-lg-3 {
+		flex: 0 0 25%;
+		max-width: 25%;
+	}
+
+	.manager-account-sidebar .col-lg-4 {
+		flex: 0 0 33.3333333333%;
+		max-width: 33.3333333333%;
+	}
+
+	.manager-account-sidebar .col-lg-5 {
+		flex: 0 0 41.6666666667%;
+		max-width: 41.6666666667%;
+	}
+
+	.manager-account-sidebar .col-lg-6 {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	.manager-account-sidebar .col-lg-7 {
+		flex: 0 0 58.3333333333%;
+		max-width: 58.3333333333%;
+	}
+
+	.manager-account-sidebar .col-lg-8 {
+		flex: 0 0 66.6666666667%;
+		max-width: 66.6666666667%;
+	}
+
+	.manager-account-sidebar .col-lg-9 {
+		flex: 0 0 75%;
+		max-width: 75%;
+	}
+
+	.manager-account-sidebar .col-lg-10 {
+		flex: 0 0 83.3333333333%;
+		max-width: 83.3333333333%;
+	}
+
+	.manager-account-sidebar .col-lg-11 {
+		flex: 0 0 91.6666666667%;
+		max-width: 91.6666666667%;
+	}
+
+	.manager-account-sidebar .col-lg-12 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.manager-account-sidebar .order-lg-first {
+		order: -1;
+	}
+
+	.manager-account-sidebar .order-lg-last {
+		order: 13;
+	}
+
+	.manager-account-sidebar .order-lg-0 {
+		order: 0;
+	}
+
+	.manager-account-sidebar .order-lg-1 {
+		order: 1;
+	}
+
+	.manager-account-sidebar .order-lg-2 {
+		order: 2;
+	}
+
+	.manager-account-sidebar .order-lg-3 {
+		order: 3;
+	}
+
+	.manager-account-sidebar .order-lg-4 {
+		order: 4;
+	}
+
+	.manager-account-sidebar .order-lg-5 {
+		order: 5;
+	}
+
+	.manager-account-sidebar .order-lg-6 {
+		order: 6;
+	}
+
+	.manager-account-sidebar .order-lg-7 {
+		order: 7;
+	}
+
+	.manager-account-sidebar .order-lg-8 {
+		order: 8;
+	}
+
+	.manager-account-sidebar .order-lg-9 {
+		order: 9;
+	}
+
+	.manager-account-sidebar .order-lg-10 {
+		order: 10;
+	}
+
+	.manager-account-sidebar .order-lg-11 {
+		order: 11;
+	}
+
+	.manager-account-sidebar .order-lg-12 {
+		order: 12;
+	}
+
+	.manager-account-sidebar .offset-lg-0 {
+		margin-left: 0;
+	}
+
+	.manager-account-sidebar .offset-lg-1 {
+		margin-left: 8.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-lg-2 {
+		margin-left: 16.6666666667%;
+	}
+
+	.manager-account-sidebar .offset-lg-3 {
+		margin-left: 25%;
+	}
+
+	.manager-account-sidebar .offset-lg-4 {
+		margin-left: 33.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-lg-5 {
+		margin-left: 41.6666666667%;
+	}
+
+	.manager-account-sidebar .offset-lg-6 {
+		margin-left: 50%;
+	}
+
+	.manager-account-sidebar .offset-lg-7 {
+		margin-left: 58.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-lg-8 {
+		margin-left: 66.6666666667%;
+	}
+
+	.manager-account-sidebar .offset-lg-9 {
+		margin-left: 75%;
+	}
+
+	.manager-account-sidebar .offset-lg-10 {
+		margin-left: 83.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-lg-11 {
+		margin-left: 91.6666666667%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.manager-account-sidebar .col-xl {
+		flex-basis: 0;
+		flex-grow: 1;
+		max-width: 100%;
+	}
+
+	.manager-account-sidebar .col-xl-auto {
+		flex: 0 0 auto;
+		width: auto;
+		max-width: none;
+	}
+
+	.manager-account-sidebar .col-xl-1 {
+		flex: 0 0 8.3333333333%;
+		max-width: 8.3333333333%;
+	}
+
+	.manager-account-sidebar .col-xl-2 {
+		flex: 0 0 16.6666666667%;
+		max-width: 16.6666666667%;
+	}
+
+	.manager-account-sidebar .col-xl-3 {
+		flex: 0 0 25%;
+		max-width: 25%;
+	}
+
+	.manager-account-sidebar .col-xl-4 {
+		flex: 0 0 33.3333333333%;
+		max-width: 33.3333333333%;
+	}
+
+	.manager-account-sidebar .col-xl-5 {
+		flex: 0 0 41.6666666667%;
+		max-width: 41.6666666667%;
+	}
+
+	.manager-account-sidebar .col-xl-6 {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+
+	.manager-account-sidebar .col-xl-7 {
+		flex: 0 0 58.3333333333%;
+		max-width: 58.3333333333%;
+	}
+
+	.manager-account-sidebar .col-xl-8 {
+		flex: 0 0 66.6666666667%;
+		max-width: 66.6666666667%;
+	}
+
+	.manager-account-sidebar .col-xl-9 {
+		flex: 0 0 75%;
+		max-width: 75%;
+	}
+
+	.manager-account-sidebar .col-xl-10 {
+		flex: 0 0 83.3333333333%;
+		max-width: 83.3333333333%;
+	}
+
+	.manager-account-sidebar .col-xl-11 {
+		flex: 0 0 91.6666666667%;
+		max-width: 91.6666666667%;
+	}
+
+	.manager-account-sidebar .col-xl-12 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.manager-account-sidebar .order-xl-first {
+		order: -1;
+	}
+
+	.manager-account-sidebar .order-xl-last {
+		order: 13;
+	}
+
+	.manager-account-sidebar .order-xl-0 {
+		order: 0;
+	}
+
+	.manager-account-sidebar .order-xl-1 {
+		order: 1;
+	}
+
+	.manager-account-sidebar .order-xl-2 {
+		order: 2;
+	}
+
+	.manager-account-sidebar .order-xl-3 {
+		order: 3;
+	}
+
+	.manager-account-sidebar .order-xl-4 {
+		order: 4;
+	}
+
+	.manager-account-sidebar .order-xl-5 {
+		order: 5;
+	}
+
+	.manager-account-sidebar .order-xl-6 {
+		order: 6;
+	}
+
+	.manager-account-sidebar .order-xl-7 {
+		order: 7;
+	}
+
+	.manager-account-sidebar .order-xl-8 {
+		order: 8;
+	}
+
+	.manager-account-sidebar .order-xl-9 {
+		order: 9;
+	}
+
+	.manager-account-sidebar .order-xl-10 {
+		order: 10;
+	}
+
+	.manager-account-sidebar .order-xl-11 {
+		order: 11;
+	}
+
+	.manager-account-sidebar .order-xl-12 {
+		order: 12;
+	}
+
+	.manager-account-sidebar .offset-xl-0 {
+		margin-left: 0;
+	}
+
+	.manager-account-sidebar .offset-xl-1 {
+		margin-left: 8.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-xl-2 {
+		margin-left: 16.6666666667%;
+	}
+
+	.manager-account-sidebar .offset-xl-3 {
+		margin-left: 25%;
+	}
+
+	.manager-account-sidebar .offset-xl-4 {
+		margin-left: 33.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-xl-5 {
+		margin-left: 41.6666666667%;
+	}
+
+	.manager-account-sidebar .offset-xl-6 {
+		margin-left: 50%;
+	}
+
+	.manager-account-sidebar .offset-xl-7 {
+		margin-left: 58.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-xl-8 {
+		margin-left: 66.6666666667%;
+	}
+
+	.manager-account-sidebar .offset-xl-9 {
+		margin-left: 75%;
+	}
+
+	.manager-account-sidebar .offset-xl-10 {
+		margin-left: 83.3333333333%;
+	}
+
+	.manager-account-sidebar .offset-xl-11 {
+		margin-left: 91.6666666667%;
+	}
+}
+
+.manager-account-sidebar .btn {
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	border: 1px solid transparent;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: 0.25rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.manager-account-sidebar .btn:hover,
+.manager-account-sidebar .btn:focus {
+	text-decoration: none;
+}
+
+.manager-account-sidebar .btn:focus,
+.manager-account-sidebar .btn.focus {
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.manager-account-sidebar .btn.disabled,
+.manager-account-sidebar .btn:disabled {
+	opacity: 0.65;
+}
+
+.manager-account-sidebar .btn:not(:disabled):not(.disabled) {
+	cursor: pointer;
+}
+
+.manager-account-sidebar .btn:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn:not(:disabled):not(.disabled).active {
+	background-image: none;
+}
+
+.manager-account-sidebar a.btn.disabled,
+.manager-account-sidebar fieldset:disabled a.btn {
+	pointer-events: none;
+}
+
+.manager-account-sidebar .btn-primary {
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+}
+
+.manager-account-sidebar .btn-primary:hover {
+	color: #fff;
+	background-color: #0069d9;
+	border-color: #0062cc;
+}
+
+.manager-account-sidebar .btn-primary:focus,
+.manager-account-sidebar .btn-primary.focus {
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.manager-account-sidebar .btn-primary.disabled,
+.manager-account-sidebar .btn-primary:disabled {
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+}
+
+.manager-account-sidebar .btn-primary:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-primary:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-primary.dropdown-toggle {
+	color: #fff;
+	background-color: #0062cc;
+	border-color: #005cbf;
+}
+
+.manager-account-sidebar .btn-primary:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-primary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.manager-account-sidebar .btn-secondary {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+
+.manager-account-sidebar .btn-secondary:hover {
+	color: #fff;
+	background-color: #5a6268;
+	border-color: #545b62;
+}
+
+.manager-account-sidebar .btn-secondary:focus,
+.manager-account-sidebar .btn-secondary.focus {
+	box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+}
+
+.manager-account-sidebar .btn-secondary.disabled,
+.manager-account-sidebar .btn-secondary:disabled {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+
+.manager-account-sidebar .btn-secondary:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-secondary:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-secondary.dropdown-toggle {
+	color: #fff;
+	background-color: #545b62;
+	border-color: #4e555b;
+}
+
+.manager-account-sidebar .btn-secondary:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-secondary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+}
+
+.manager-account-sidebar .btn-success {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+}
+
+.manager-account-sidebar .btn-success:hover {
+	color: #fff;
+	background-color: #218838;
+	border-color: #1e7e34;
+}
+
+.manager-account-sidebar .btn-success:focus,
+.manager-account-sidebar .btn-success.focus {
+	box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.manager-account-sidebar .btn-success.disabled,
+.manager-account-sidebar .btn-success:disabled {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+}
+
+.manager-account-sidebar .btn-success:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-success:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-success.dropdown-toggle {
+	color: #fff;
+	background-color: #1e7e34;
+	border-color: #1c7430;
+}
+
+.manager-account-sidebar .btn-success:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-success:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-success.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.manager-account-sidebar .btn-info {
+	color: #fff;
+	background-color: #17a2b8;
+	border-color: #17a2b8;
+}
+
+.manager-account-sidebar .btn-info:hover {
+	color: #fff;
+	background-color: #138496;
+	border-color: #117a8b;
+}
+
+.manager-account-sidebar .btn-info:focus,
+.manager-account-sidebar .btn-info.focus {
+	box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+}
+
+.manager-account-sidebar .btn-info.disabled,
+.manager-account-sidebar .btn-info:disabled {
+	color: #fff;
+	background-color: #17a2b8;
+	border-color: #17a2b8;
+}
+
+.manager-account-sidebar .btn-info:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-info:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-info.dropdown-toggle {
+	color: #fff;
+	background-color: #117a8b;
+	border-color: #10707f;
+}
+
+.manager-account-sidebar .btn-info:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-info:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-info.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+}
+
+.manager-account-sidebar .btn-warning {
+	color: #212529;
+	background-color: #ffc107;
+	border-color: #ffc107;
+}
+
+.manager-account-sidebar .btn-warning:hover {
+	color: #212529;
+	background-color: #e0a800;
+	border-color: #d39e00;
+}
+
+.manager-account-sidebar .btn-warning:focus,
+.manager-account-sidebar .btn-warning.focus {
+	box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+}
+
+.manager-account-sidebar .btn-warning.disabled,
+.manager-account-sidebar .btn-warning:disabled {
+	color: #212529;
+	background-color: #ffc107;
+	border-color: #ffc107;
+}
+
+.manager-account-sidebar .btn-warning:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-warning:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-warning.dropdown-toggle {
+	color: #212529;
+	background-color: #d39e00;
+	border-color: #c69500;
+}
+
+.manager-account-sidebar .btn-warning:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-warning:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-warning.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+}
+
+.manager-account-sidebar .btn-danger {
+	color: #fff;
+	background-color: #dc3545;
+	border-color: #dc3545;
+}
+
+.manager-account-sidebar .btn-danger:hover {
+	color: #fff;
+	background-color: #c82333;
+	border-color: #bd2130;
+}
+
+.manager-account-sidebar .btn-danger:focus,
+.manager-account-sidebar .btn-danger.focus {
+	box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+.manager-account-sidebar .btn-danger.disabled,
+.manager-account-sidebar .btn-danger:disabled {
+	color: #fff;
+	background-color: #dc3545;
+	border-color: #dc3545;
+}
+
+.manager-account-sidebar .btn-danger:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-danger:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-danger.dropdown-toggle {
+	color: #fff;
+	background-color: #bd2130;
+	border-color: #b21f2d;
+}
+
+.manager-account-sidebar .btn-danger:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-danger:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-danger.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+.manager-account-sidebar .btn-light {
+	color: #212529;
+	background-color: #f8f9fa;
+	border-color: #f8f9fa;
+}
+
+.manager-account-sidebar .btn-light:hover {
+	color: #212529;
+	background-color: #e2e6ea;
+	border-color: #dae0e5;
+}
+
+.manager-account-sidebar .btn-light:focus,
+.manager-account-sidebar .btn-light.focus {
+	box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+.manager-account-sidebar .btn-light.disabled,
+.manager-account-sidebar .btn-light:disabled {
+	color: #212529;
+	background-color: #f8f9fa;
+	border-color: #f8f9fa;
+}
+
+.manager-account-sidebar .btn-light:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-light:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-light.dropdown-toggle {
+	color: #212529;
+	background-color: #dae0e5;
+	border-color: #d3d9df;
+}
+
+.manager-account-sidebar .btn-light:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-light:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-light.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+.manager-account-sidebar .btn-dark {
+	color: #fff;
+	background-color: #343a40;
+	border-color: #343a40;
+}
+
+.manager-account-sidebar .btn-dark:hover {
+	color: #fff;
+	background-color: #23272b;
+	border-color: #1d2124;
+}
+
+.manager-account-sidebar .btn-dark:focus,
+.manager-account-sidebar .btn-dark.focus {
+	box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+.manager-account-sidebar .btn-dark.disabled,
+.manager-account-sidebar .btn-dark:disabled {
+	color: #fff;
+	background-color: #343a40;
+	border-color: #343a40;
+}
+
+.manager-account-sidebar .btn-dark:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-dark:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-dark.dropdown-toggle {
+	color: #fff;
+	background-color: #1d2124;
+	border-color: #171a1d;
+}
+
+.manager-account-sidebar .btn-dark:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-dark:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-dark.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-primary {
+	color: #007bff;
+	background-color: transparent;
+	background-image: none;
+	border-color: #007bff;
+}
+
+.manager-account-sidebar .btn-outline-primary:hover {
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+}
+
+.manager-account-sidebar .btn-outline-primary:focus,
+.manager-account-sidebar .btn-outline-primary.focus {
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-primary.disabled,
+.manager-account-sidebar .btn-outline-primary:disabled {
+	color: #007bff;
+	background-color: transparent;
+}
+
+.manager-account-sidebar .btn-outline-primary:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-outline-primary.dropdown-toggle {
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+}
+
+.manager-account-sidebar .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-outline-primary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-secondary {
+	color: #6c757d;
+	background-color: transparent;
+	background-image: none;
+	border-color: #6c757d;
+}
+
+.manager-account-sidebar .btn-outline-secondary:hover {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+
+.manager-account-sidebar .btn-outline-secondary:focus,
+.manager-account-sidebar .btn-outline-secondary.focus {
+	box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-secondary.disabled,
+.manager-account-sidebar .btn-outline-secondary:disabled {
+	color: #6c757d;
+	background-color: transparent;
+}
+
+.manager-account-sidebar .btn-outline-secondary:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-outline-secondary:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-outline-secondary.dropdown-toggle {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+
+.manager-account-sidebar .btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-outline-secondary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-success {
+	color: #28a745;
+	background-color: transparent;
+	background-image: none;
+	border-color: #28a745;
+}
+
+.manager-account-sidebar .btn-outline-success:hover {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+}
+
+.manager-account-sidebar .btn-outline-success:focus,
+.manager-account-sidebar .btn-outline-success.focus {
+	box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-success.disabled,
+.manager-account-sidebar .btn-outline-success:disabled {
+	color: #28a745;
+	background-color: transparent;
+}
+
+.manager-account-sidebar .btn-outline-success:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-outline-success:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-outline-success.dropdown-toggle {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+}
+
+.manager-account-sidebar .btn-outline-success:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-outline-success:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-outline-success.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-info {
+	color: #17a2b8;
+	background-color: transparent;
+	background-image: none;
+	border-color: #17a2b8;
+}
+
+.manager-account-sidebar .btn-outline-info:hover {
+	color: #fff;
+	background-color: #17a2b8;
+	border-color: #17a2b8;
+}
+
+.manager-account-sidebar .btn-outline-info:focus,
+.manager-account-sidebar .btn-outline-info.focus {
+	box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-info.disabled,
+.manager-account-sidebar .btn-outline-info:disabled {
+	color: #17a2b8;
+	background-color: transparent;
+}
+
+.manager-account-sidebar .btn-outline-info:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-outline-info:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-outline-info.dropdown-toggle {
+	color: #fff;
+	background-color: #17a2b8;
+	border-color: #17a2b8;
+}
+
+.manager-account-sidebar .btn-outline-info:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-outline-info:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-outline-info.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-warning {
+	color: #ffc107;
+	background-color: transparent;
+	background-image: none;
+	border-color: #ffc107;
+}
+
+.manager-account-sidebar .btn-outline-warning:hover {
+	color: #212529;
+	background-color: #ffc107;
+	border-color: #ffc107;
+}
+
+.manager-account-sidebar .btn-outline-warning:focus,
+.manager-account-sidebar .btn-outline-warning.focus {
+	box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-warning.disabled,
+.manager-account-sidebar .btn-outline-warning:disabled {
+	color: #ffc107;
+	background-color: transparent;
+}
+
+.manager-account-sidebar .btn-outline-warning:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-outline-warning:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-outline-warning.dropdown-toggle {
+	color: #212529;
+	background-color: #ffc107;
+	border-color: #ffc107;
+}
+
+.manager-account-sidebar .btn-outline-warning:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-outline-warning:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-outline-warning.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-danger {
+	color: #dc3545;
+	background-color: transparent;
+	background-image: none;
+	border-color: #dc3545;
+}
+
+.manager-account-sidebar .btn-outline-danger:hover {
+	color: #fff;
+	background-color: #dc3545;
+	border-color: #dc3545;
+}
+
+.manager-account-sidebar .btn-outline-danger:focus,
+.manager-account-sidebar .btn-outline-danger.focus {
+	box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-danger.disabled,
+.manager-account-sidebar .btn-outline-danger:disabled {
+	color: #dc3545;
+	background-color: transparent;
+}
+
+.manager-account-sidebar .btn-outline-danger:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-outline-danger:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-outline-danger.dropdown-toggle {
+	color: #fff;
+	background-color: #dc3545;
+	border-color: #dc3545;
+}
+
+.manager-account-sidebar .btn-outline-danger:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-outline-danger:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-outline-danger.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-light {
+	color: #f8f9fa;
+	background-color: transparent;
+	background-image: none;
+	border-color: #f8f9fa;
+}
+
+.manager-account-sidebar .btn-outline-light:hover {
+	color: #212529;
+	background-color: #f8f9fa;
+	border-color: #f8f9fa;
+}
+
+.manager-account-sidebar .btn-outline-light:focus,
+.manager-account-sidebar .btn-outline-light.focus {
+	box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-light.disabled,
+.manager-account-sidebar .btn-outline-light:disabled {
+	color: #f8f9fa;
+	background-color: transparent;
+}
+
+.manager-account-sidebar .btn-outline-light:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-outline-light:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-outline-light.dropdown-toggle {
+	color: #212529;
+	background-color: #f8f9fa;
+	border-color: #f8f9fa;
+}
+
+.manager-account-sidebar .btn-outline-light:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-outline-light:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-outline-light.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-dark {
+	color: #343a40;
+	background-color: transparent;
+	background-image: none;
+	border-color: #343a40;
+}
+
+.manager-account-sidebar .btn-outline-dark:hover {
+	color: #fff;
+	background-color: #343a40;
+	border-color: #343a40;
+}
+
+.manager-account-sidebar .btn-outline-dark:focus,
+.manager-account-sidebar .btn-outline-dark.focus {
+	box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+.manager-account-sidebar .btn-outline-dark.disabled,
+.manager-account-sidebar .btn-outline-dark:disabled {
+	color: #343a40;
+	background-color: transparent;
+}
+
+.manager-account-sidebar .btn-outline-dark:not(:disabled):not(.disabled):active,
+.manager-account-sidebar .btn-outline-dark:not(:disabled):not(.disabled).active,
+.show > .manager-account-sidebar .btn-outline-dark.dropdown-toggle {
+	color: #fff;
+	background-color: #343a40;
+	border-color: #343a40;
+}
+
+.manager-account-sidebar .btn-outline-dark:not(:disabled):not(.disabled):active:focus,
+.manager-account-sidebar .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
+.show > .manager-account-sidebar .btn-outline-dark.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
+}
+
+.manager-account-sidebar .btn-link {
+	font-weight: 400;
+	color: #007bff;
+	background-color: transparent;
+}
+
+.manager-account-sidebar .btn-link:hover {
+	color: #0056b3;
+	text-decoration: underline;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.manager-account-sidebar .btn-link:focus,
+.manager-account-sidebar .btn-link.focus {
+	text-decoration: underline;
+	border-color: transparent;
+	box-shadow: none;
+}
+
+.manager-account-sidebar .btn-link:disabled,
+.manager-account-sidebar .btn-link.disabled {
+	color: #6c757d;
+}
+
+.manager-account-sidebar .btn-lg,
+.manager-account-sidebar .btn-group-lg > .btn {
+	padding: 0.5rem 1rem;
+	font-size: 1.25rem;
+	line-height: 1.5;
+	border-radius: 0.3rem;
+}
+
+.manager-account-sidebar .btn-sm,
+.manager-account-sidebar .btn-group-sm > .btn {
+	padding: 0.25rem 0.5rem;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	border-radius: 0.2rem;
+}
+
+.manager-account-sidebar .btn-block {
+	display: block;
+	width: 100%;
+}
+
+.manager-account-sidebar .btn-block + .btn-block {
+	margin-top: 0.5rem;
+}
+
+.manager-account-sidebar input[type='submit'].btn-block,
+.manager-account-sidebar input[type='reset'].btn-block,
+.manager-account-sidebar input[type='button'].btn-block {
+	width: 100%;
+}
+
+.manager-account-sidebar .btn-group,
+.manager-account-sidebar .btn-group-vertical {
+	position: relative;
+	display: inline-flex;
+	vertical-align: middle;
+}
+
+.manager-account-sidebar .btn-group > .btn,
+.manager-account-sidebar .btn-group-vertical > .btn {
+	position: relative;
+	flex: 0 1 auto;
+}
+
+.manager-account-sidebar .btn-group > .btn:hover,
+.manager-account-sidebar .btn-group-vertical > .btn:hover {
+	z-index: 1;
+}
+
+.manager-account-sidebar .btn-group > .btn:focus,
+.manager-account-sidebar .btn-group > .btn:active,
+.manager-account-sidebar .btn-group > .btn.active,
+.manager-account-sidebar .btn-group-vertical > .btn:focus,
+.manager-account-sidebar .btn-group-vertical > .btn:active,
+.manager-account-sidebar .btn-group-vertical > .btn.active {
+	z-index: 1;
+}
+
+.manager-account-sidebar .btn-group .btn + .btn,
+.manager-account-sidebar .btn-group .btn + .btn-group,
+.manager-account-sidebar .btn-group .btn-group + .btn,
+.manager-account-sidebar .btn-group .btn-group + .btn-group,
+.manager-account-sidebar .btn-group-vertical .btn + .btn,
+.manager-account-sidebar .btn-group-vertical .btn + .btn-group,
+.manager-account-sidebar .btn-group-vertical .btn-group + .btn,
+.manager-account-sidebar .btn-group-vertical .btn-group + .btn-group {
+	margin-left: -1px;
+}
+
+.manager-account-sidebar .btn-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.manager-account-sidebar .btn-toolbar .input-group {
+	width: auto;
+}
+
+.manager-account-sidebar .btn-group > .btn:first-child {
+	margin-left: 0;
+}
+
+.manager-account-sidebar .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.manager-account-sidebar .btn-group > .btn-group:not(:last-child) > .btn {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.manager-account-sidebar .btn-group > .btn:not(:first-child),
+.manager-account-sidebar .btn-group > .btn-group:not(:first-child) > .btn {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.manager-account-sidebar .dropdown-toggle-split {
+	padding-right: 0.5625rem;
+	padding-left: 0.5625rem;
+}
+
+.manager-account-sidebar .dropdown-toggle-split:after {
+	margin-left: 0;
+}
+
+.manager-account-sidebar .btn-sm + .dropdown-toggle-split,
+.manager-account-sidebar .btn-group-sm > .btn + .dropdown-toggle-split {
+	padding-right: 0.375rem;
+	padding-left: 0.375rem;
+}
+
+.manager-account-sidebar .btn-lg + .dropdown-toggle-split,
+.manager-account-sidebar .btn-group-lg > .btn + .dropdown-toggle-split {
+	padding-right: 0.75rem;
+	padding-left: 0.75rem;
+}
+
+.manager-account-sidebar .btn-group-vertical {
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.manager-account-sidebar .btn-group-vertical .btn,
+.manager-account-sidebar .btn-group-vertical .btn-group {
+	width: 100%;
+}
+
+.manager-account-sidebar .btn-group-vertical > .btn + .btn,
+.manager-account-sidebar .btn-group-vertical > .btn + .btn-group,
+.manager-account-sidebar .btn-group-vertical > .btn-group + .btn,
+.manager-account-sidebar .btn-group-vertical > .btn-group + .btn-group {
+	margin-top: -1px;
+	margin-left: 0;
+}
+
+.manager-account-sidebar .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
+.manager-account-sidebar .btn-group-vertical > .btn-group:not(:last-child) > .btn {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.manager-account-sidebar .btn-group-vertical > .btn:not(:first-child),
+.manager-account-sidebar .btn-group-vertical > .btn-group:not(:first-child) > .btn {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.manager-account-sidebar .btn-group-toggle > .btn,
+.manager-account-sidebar .btn-group-toggle > .btn-group > .btn {
+	margin-bottom: 0;
+}
+
+.manager-account-sidebar .btn-group-toggle > .btn input[type='radio'],
+.manager-account-sidebar .btn-group-toggle > .btn input[type='checkbox'],
+.manager-account-sidebar .btn-group-toggle > .btn-group > .btn input[type='radio'],
+.manager-account-sidebar .btn-group-toggle > .btn-group > .btn input[type='checkbox'] {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	pointer-events: none;
+}
+
+.manager-account-sidebar .minw-0 {
+	min-width: 0;
+}
+
+.manager-account-sidebar h3 {
+	font-size: 1rem;
+	font-weight: 700;
+	color: #00185e;
+}
+
+.manager-account-sidebar h3 * {
+	color: inherit;
+}
+
+.manager-account-sidebar p {
+	line-height: inherit;
+}
+
+.manager-account-sidebar-payment-method > a {
+	background: #bef1ff;
+	border-radius: 0.5rem;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	width: 100%;
+	text-decoration: none;
+	transition: background-color 0.25s;
+}
+
+.manager-account-sidebar-payment-method > a:hover {
+	background-color: #85d9fd;
+	text-decoration: none;
+}
+
+.manager-account-sidebar-payment-method img {
+	width: 2.5rem;
+}
+
+.manager-account-sidebar-payment-method h3 {
+	font-size: 0.85rem;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5rem;
+}
+
+.manager-account-sidebar-payment-method_label {
+	font-size: 0.75rem;
+}
+
+.manager-account-sidebar-payment-method_label > p {
+	color: inherit;
+}
+
+.manager-account-sidebar-payment-method_status {
+	font-size: 0.8rem;
+	font-weight: 700;
+	max-width: none;
+	line-height: 0.85rem;
+}
+
+.manager-account-sidebar-payment-method .oui-badge_error {
+	color: #c11b1b;
+}
+
+.manager-account-sidebar-payment-method .oui-badge_warning {
+	color: #8b6111;
+}
+
+.manager-account-sidebar-payment-method .oui-badge_success {
+	color: #268403;
+}
+
+.manager-account-sidebar-payment-method .oui-icon {
+	color: #00185e;
+}
+
+.manager-account-sidebar-payment-method .oui-icon-arrow-right {
+	color: #0050d7;
+}
+
+.manager-account-sidebar-shortcuts_links {
+	max-width: 33%;
+	flex: 1 1 auto;
+}
+
+.manager-account-sidebar-shortcuts-tile {
+	text-align: center;
+}
+
+.manager-account-sidebar-shortcuts-tile > a {
+	display: block;
+	color: #00185e !important;
+	font-weight: 600;
+}
+
+.manager-account-sidebar-shortcuts-tile > a:hover {
+	text-decoration: none;
+}
+
+.manager-account-sidebar-shortcuts-tile__icon {
+	display: flex;
+	width: 4rem;
+	height: 4rem;
+	margin: auto;
+	background-color: #fff;
+	border-radius: 0.4rem;
+	justify-content: center;
+	align-items: center;
+}
+
+.manager-account-sidebar-shortcuts-tile__icon:hover {
+	background-color: #85d9fd;
+}
+
+.manager-account-sidebar-shortcuts-tile__description {
+	display: block;
+	margin-top: 0.25rem;
+	line-height: 1.25;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.manager-account-sidebar-shortcuts-tile .oui-icon {
+	font-size: 2rem;
+	margin-top: 1rem;
+	color: #00185e;
+}
+
+.manager-account-sidebar-links a,
+.manager-account-sidebar-links .btn-link {
+	font-weight: 700;
+	color: #0050d7 !important;
+	padding: 0;
+	text-decoration: none;
+	white-space: initial;
+	text-align: left;
+	letter-spacing: normal;
+}
+
+.manager-account-sidebar-links a .oui-icon,
+.manager-account-sidebar-links .btn-link .oui-icon {
+	line-height: 1;
+	color: #0050d7;
+	font-size: 1.5rem;
+	vertical-align: middle;
+	margin-right: 1rem;
+}
+
+.manager-account-sidebar-links a:hover,
+.manager-account-sidebar-links .btn-link:hover {
+	text-decoration: none;
+}
+
+.manager-account-sidebar-links_divider {
+	display: block;
+	border-top: 1px solid #abedff;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.manager-account-sidebar-user-infos {
+	background-color: #fff;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.075);
+	text-align: center;
+	border-radius: 6pt;
+	padding: 0.25rem;
+	color: #4d5592;
+}
+
+.manager-account-sidebar-user-infos hr {
+	height: 1px;
+	border: 0;
+	color: #eee;
+	background-color: #eee;
+	margin-top: 2rem;
+}
+
+.manager-account-sidebar-user-infos_text-small {
+	font-size: 0.9rem;
+}
+
+.manager-account-sidebar-user-infos .manager-account-sidebar-user-infos_initials {
+	width: 5rem;
+	height: 5rem;
+	display: block;
+	font-size: 2.5rem;
+	padding-top: 0.5rem;
+	background-color: #4bb2f6;
+	color: #fff !important;
+	border-radius: 2.5rem;
+	text-align: center;
+	font-weight: 400;
+}
+
+.manager-account-sidebar-user-infos .manager-account-sidebar-user-infos_profile_link {
+	color: #0050d7;
+	font-weight: 600;
+}
+
+.manager-account-sidebar-user-infos .manager-account-sidebar-user-infos_profile:hover,
+.manager-account-sidebar-user-infos .manager-account-sidebar-user-infos_profile:focus {
+	text-decoration: none;
+}
+
+.manager-account-sidebar-user-infos
+	.manager-account-sidebar-user-infos_profile:hover
+	.manager-account-sidebar-user-infos_initials,
+.manager-account-sidebar-user-infos
+	.manager-account-sidebar-user-infos_profile:focus
+	.manager-account-sidebar-user-infos_initials {
+	background-color: #157eea;
+}
+
+.manager-account-sidebar-user-infos
+	.manager-account-sidebar-user-infos_profile:hover
+	.manager-account-sidebar-user-infos_profile_link,
+.manager-account-sidebar-user-infos
+	.manager-account-sidebar-user-infos_profile:focus
+	.manager-account-sidebar-user-infos_profile_link {
+	color: #000e9c;
+}
+
+.manager-account-sidebar-user-infos p.oui-chip {
+	color: #000e9c;
+	line-height: 1.875rem;
+}
+
+.manager-account-sidebar-user-infos_initials-centered {
+	position: relative;
+	top: -2.5rem;
+	margin: auto;
+	margin-bottom: -3.125rem;
+}
+
+.manager-account-sidebar-user-infos_user-name button.btn.btn-link {
+	text-decoration: none;
+	width: 100%;
+}
+
+.manager-account-sidebar-user-infos_user-name button.btn.btn-link span {
+	color: #0050d7;
+	font-weight: 600;
+}
+
+.manager-account-sidebar-user-infos_user-name button.btn.btn-link .oui-icon {
+	font-size: 1rem;
+	vertical-align: middle;
+	margin-left: 0.2rem;
+	font-weight: 600;
+}
+
+.manager-account-sidebar-user-infos_user-name__login,
+.manager-account-sidebar-user-infos_role {
+	white-space: initial;
+}
+
+.manager-account-sidebar-user-infos_links {
+	clear: both;
+	text-decoration: none;
+}
+
+.manager-account-sidebar-user-infos_links .btn.btn-link {
+	color: #0050d7;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.manager-account-sidebar-user-infos_links .btn.btn-link:hover {
+	color: #000e9c;
+	text-decoration: none;
+}
+
+.manager-account-sidebar-user-infos .oui-badge {
+	font-size: 0.8rem;
+	font-weight: 700;
+}

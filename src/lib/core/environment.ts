@@ -12,6 +12,14 @@ export const DEFAULT_REGION = Region.EU;
 export interface User {
 	firstname?: string;
 	name?: string;
+	supportLevel?: {
+		level?: string;
+	};
+	isTrusted?: boolean;
+	auth?: any;
+	email?: string;
+	nichandle?: string;
+	organisation?: string;
 }
 
 export class Environment {

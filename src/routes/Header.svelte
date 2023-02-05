@@ -7,6 +7,7 @@
 	import { getContext, onMount } from 'svelte';
 	import { environment } from '$lib/core/environment';
 	import { get } from 'svelte/store';
+	import AccountSidebar from '$lib/components/container/account-sidebar/AccountSidebar.svelte';
 
 	let env = get(environment);
 
@@ -17,9 +18,8 @@
 	// let shell = getContext('shell');
 </script>
 
-<div class="_popoverClickAway_1djxe_1 _hidden_1djxe_12 sf-hidden" />
 <NavBar environment={env} />
-<!-- AccountSideBar -->
+<AccountSidebar />
 <NotificationsSidebar />
 
 <!--

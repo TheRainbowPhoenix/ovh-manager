@@ -15,7 +15,7 @@ export const GET: (r: GetRequest) => Response = ({ url }) => {
 			zip: null,
 			phoneCountry: 'UNKNOWN',
 			nationalIdentificationNumber: null,
-			organisation: null,
+			organisation: 'Company Name',
 			spareEmail: null,
 			name: 'Name',
 			vat: null,
