@@ -12,7 +12,6 @@
 
 	notifications.subscribe((n) => {
 		notificationsCount = (n || []).filter(({ isActive }) => isActive()).length;
-		console.log('notificationsCount : ', notificationsCount);
 	});
 
 	onMount(() => {

@@ -1,4 +1,5 @@
 import { error } from '@sveltejs/kit';
+import type { RequestEvent } from '@sveltejs/kit';
 
 interface GetRequest {
 	url: URL;
@@ -43,9 +44,37 @@ export const GET: (r: GetRequest) => Response = ({ url }) => {
 	return new Response(JSON.stringify(r));
 };
 
-export const POST: (r: GetRequest) => Response = ({ url }) => {
-	notifs.map((n) => {
-		n.status = 'acknowledged';
-	});
+interface PostRequest extends RequestEvent {}
+
+export const POST: (p: PostRequest) => Promise<Response> = async ({
+	cookies,
+	request,
+	route,
+	url,
+	setHeaders
+}) => {
+	let req = await request.json();
+	// console.log(p);
+
+	if (req && req?.acknowledged && Array.isArray(req?.acknowledged)) {
+		req?.acknowledged.map((id: string) => {
+			notifs.map((n) => {
+				if (n.id === id) {
+					n.status = 'acknowledged';
+				}
+			});
+		});
+	}
+
+	if (req && req?.delivered && Array.isArray(req?.delivered)) {
+		req?.delivered.map((id: string) => {
+			notifs.map((n) => {
+				if (n.id === id) {
+					n.status = 'delivered';
+				}
+			});
+		});
+	}
+
 	return new Response(JSON.stringify(notifs));
 };

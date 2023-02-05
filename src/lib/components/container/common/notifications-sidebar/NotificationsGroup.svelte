@@ -40,5 +40,9 @@
 </li>
 
 <style lang="scss">
-	@import './notification.scss';
+	.notificationsList_group_title {
+		font-size: 1.125rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
 </style>

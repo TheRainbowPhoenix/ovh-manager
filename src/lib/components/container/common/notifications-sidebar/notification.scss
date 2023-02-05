@@ -26,24 +26,6 @@
 		line-height: 1rem;
 	}
 
-	button.oui-badge {
-		position: absolute;
-		font-size: 0.75rem;
-		top: 1.25rem;
-		right: 1.25rem;
-		cursor: pointer;
-
-		&_error {
-			background-color: $ae-500;
-			color: $p-000;
-		}
-
-		&_info {
-			background-color: $p-500;
-			color: $p-000;
-		}
-	}
-
 	&_subject {
 		font-size: 1.125rem;
 		font-weight: 600;
