@@ -1,9 +1,10 @@
 <script lang="ts">
 	import type { Universe } from './service';
 	import { t } from '$lib/i18n';
+	import { currentUniverse } from '$lib/context/universe';
+	import { get } from 'svelte/store';
 
 	export let onClick: (universe: Universe) => void;
-	export let universe: string = '';
 	export let universes: Array<Universe>;
 </script>
 
@@ -19,10 +20,11 @@
 					rel: 'noopener',
 					target: '_blank'
 				}}
+				data-universe={u.universe}
 				class={`
               oui-navbar-link
               oui-navbar-link_${u.isPrimary ? 'primary' : 'secondary'}
-              ${universe === u.universe ? 'oui-navbar-link_active' : ''}
+              ${$currentUniverse === u.universe ? 'oui-navbar-link_active' : ''}
             `}
 			>
 				{$t(`navbar_universe_${u.universe}`)}

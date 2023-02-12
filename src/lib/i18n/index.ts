@@ -52,16 +52,19 @@ export const setUserLocale = (l: string) => {
 export interface Language {
 	name: string;
 	key: string;
+	locale: string;
 }
 
 const languageMap: { [key: string]: Language } = {
 	en: {
 		name: 'English',
-		key: 'en'
+		key: 'en',
+		locale: 'en_GB'
 	},
 	fr: {
 		name: 'French',
-		key: 'fr'
+		key: 'fr',
+		locale: 'fr_FR'
 	}
 };
 
@@ -72,3 +75,5 @@ export let getAvailableLanguages: () => Language[] = () => {
 export let getCurrentLanguage = () => {
 	return languageMap[get(userLocale)] || languageMap['en'];
 };
+
+export const fallbackLanguage = languageMap['en'];

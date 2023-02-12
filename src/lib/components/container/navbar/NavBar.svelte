@@ -16,6 +16,8 @@
 	import { onMount } from 'svelte';
 	import { setUserLocale, userLocale } from '$lib/i18n';
 	import NotificationsButton from '../common/notifications-sidebar/NotificationsButton.svelte';
+	import { currentUniverse } from '$lib/context/universe';
+	import { get } from 'svelte/store';
 
 	export let environment: Environment; // TODO
 
@@ -24,7 +26,6 @@
 	});
 
 	let universes: Universe[] = [];
-	let currentUniverse: string = 'currentUniverse';
 	let isDropdownOpen: boolean = false;
 
 	let searchURL = '#'; // TODO: to store
@@ -44,6 +45,7 @@
 	}
 
 	function universeClickHandler(universe: Universe) {
+		currentUniverse.set(universe.universe);
 		// shell.getPlugin('tracking').trackClick({
 		//     name: `navbar::entry::${universe}`,
 		//     type: 'action',
@@ -55,9 +57,9 @@
 <div class="popoverClickAway" class:hidden={!isDropdownOpen} />
 
 <div class="oui-navbar navbar">
-	<Hamburger universe={currentUniverse} {universes} />
+	<Hamburger universe={get(currentUniverse)} {universes} />
 	<Brand targetURL={getBrandURL(universes)} on:click={brandClickHandler} />
-	<Universes universe={currentUniverse} {universes} onClick={universeClickHandler} />
+	<Universes {universes} onClick={universeClickHandler} />
 	<div class="oui-navbar-list oui-navbar-list_aside oui-navbar-list_end aside">
 		{#if searchURL}
 			<div class="oui-navbar-list__item">

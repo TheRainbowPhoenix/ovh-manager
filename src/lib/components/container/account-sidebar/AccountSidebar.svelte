@@ -6,11 +6,19 @@
 	import UserInfos from './UserInfos/index.svelte';
 
 	import { environment as environmentStore, type Environment } from '$lib/core/environment';
+	import { onMount } from 'svelte';
 
 	export let environment: Environment; // TODO
 
 	environmentStore.subscribe((e) => {
 		environment = e;
+	});
+
+	onMount(() => {
+		const isSmallDevice = window.innerWidth <= 720; // TODO
+		if (isSmallDevice) {
+			$headerCtx.isAccountSidebarVisible = false;
+		}
 	});
 </script>
 

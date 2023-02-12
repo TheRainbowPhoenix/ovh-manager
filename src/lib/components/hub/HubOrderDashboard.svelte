@@ -3,6 +3,7 @@
 	import { debug, onMount } from 'svelte/internal';
 	import { useReket } from '@ovh-ux/ovh-reket';
 	import { Universe } from '../container/navbar/service';
+	import { getAvailableLanguages, getCurrentLanguage, userLocale } from '$lib/i18n';
 
 	let products;
 	export let tickets: any[] = []; // TODO
@@ -17,12 +18,25 @@
 
 	let servicesData: any = null;
 
-	let universes = ['Web Hosting & Domains', 'Bare Metal Cloud', 'Hosted Private Cloud'];
+	let localizedFilteredUniverses: { [key: string]: string[] } = {
+		en_GB: ['Web Hosting & Domains', 'Bare Metal Cloud', 'Hosted Private Cloud'],
+		fr_FR: ['Hébergements web & Domaines', 'Bare Metal Cloud', 'Hosted Private Cloud']
+	};
 
-	onMount(async () => {
+	let universes: string[] = [];
+
+	let ready = false;
+
+	const fetchData = async () => {
+		let locale = getCurrentLanguage().locale;
+		universes = Object.keys(localizedFilteredUniverses).includes(locale)
+			? localizedFilteredUniverses[locale]
+			: localizedFilteredUniverses['en_GB'];
+
 		let r = await fetch('/engine/2api/hub/catalog', {
 			headers: {
 				'Content-Type': 'application/json;charset=utf-8',
+				'content-language': locale, // 'fr_FR'
 				Accept: 'application/json'
 			},
 			credentials: 'same-origin'
@@ -31,7 +45,15 @@
 		r = await r.json();
 
 		servicesData = r || {};
+	};
 
+	userLocale.subscribe((locale) => {
+		ready && fetchData().then(() => {});
+	});
+
+	onMount(async () => {
+		await fetchData();
+		ready = true;
 		// .then(function (e: any) {
 		// 	return e.json(); // .services
 		// })

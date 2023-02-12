@@ -10,6 +10,6 @@ export type HeaderContextType = {
 
 export const headerCtx = writable<HeaderContextType>({
 	isAccountSidebarVisible: true,
-	isAccountSidebarLargeScreenDisplayForced: true,
+	isAccountSidebarLargeScreenDisplayForced: false, // TODO ?
 	isNotificationsSidebarVisible: false
 } as HeaderContextType);

@@ -3,13 +3,16 @@
 	import type { User } from '$lib/core/environment';
 	import { capitalize, truncate } from '$lib/helpers/stringsHelper';
 	import { t } from '$lib/i18n';
+	import { get } from 'svelte/store';
 
 	export let user: User;
 
 	const toggleSidebar = () => {
+		console.log('navbar::action::user-bar');
 		// uxPlugin.toggleAccountSidebarVisibility();
 		// $headerCtx.isAccountSidebarVisible = uxPlugin.isAccountSidebarVisible()
-		$headerCtx.isNotificationsSidebarVisible = false;
+		let visible = get(headerCtx).isAccountSidebarVisible || false;
+		$headerCtx.isAccountSidebarVisible = !visible;
 
 		// shell.getPlugin('tracking').trackClick({
 		// 	name: 'navbar::action::user-bar',

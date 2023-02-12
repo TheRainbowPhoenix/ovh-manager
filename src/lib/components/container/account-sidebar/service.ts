@@ -42,7 +42,7 @@ export const userInfos = (user: User): UserInfos => {
 	 * @return {String}
 	 */
 	const getSupportLevel = (): string /* SupportLevel */ => {
-		return user?.supportLevel?.level || '';
+		return user?.supportLevel?.level || 'standard';
 	};
 
 	/**
@@ -195,4 +195,72 @@ export const paymentMethod = (environment: Environment) => {
 		// method,
 		// getMethod
 	};
+};
+
+export type Shortcut = {
+	icon: string;
+	id: string;
+	tracking: string;
+	url: string;
+};
+
+export const getShortcuts = (region: string, user: any): Shortcut[] => {
+	return [
+		...(['EU', 'CA'].includes(region)
+			? [
+					{
+						id: 'services',
+						icon: 'oui-icon-multi-device_concept',
+						url: '/dedicated/billing/autoRenew',
+						tracking: 'hub::sidebar::shortcuts::go-to-services'
+					}
+			  ]
+			: []),
+		{
+			id: 'bills',
+			icon: 'oui-icon-receipt_concept',
+			url: user.enterprise ? 'https://billing.us.ovhcloud.com/login' : '/dedicated/billing/history',
+			tracking: 'hub::sidebar::shortcuts::go-to-bills'
+		},
+		...(['EU', 'CA'].includes(region)
+			? [
+					{
+						id: 'supportLevel',
+						icon: 'oui-icon-lifebuoy_concept',
+						url: '/dedicated/useraccount/support/level',
+						tracking: 'hub::sidebar::shortcuts::go-to-support-level'
+					}
+			  ]
+			: []),
+		...(user.isTrusted
+			? []
+			: [
+					{
+						id: 'products',
+						icon: 'oui-icon-book-open_concept',
+						tracking: 'hub::sidebar::shortcuts::go-to-catalog',
+						url: '/hub/catalog'
+					}
+			  ]),
+		...(['EU', 'CA'].includes(region)
+			? [
+					{
+						id: 'emails',
+						icon: 'oui-icon-envelop-letter_concept',
+						url: '/dedicated/useraccount/emails',
+						tracking: 'hub::sidebar::shortcuts::go-to-emails'
+					}
+			  ]
+			: []),
+		...(['EU', 'CA'].includes(region)
+			? [
+					{
+						id: 'contacts',
+						icon: 'oui-icon-book-contact_concept',
+						url: '/dedicated/contacts/services',
+						tracking: 'hub::sidebar::shortcuts::go-to-contacts'
+					}
+			  ]
+			: [])
+	];
 };
